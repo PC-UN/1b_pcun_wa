@@ -55,25 +55,22 @@ class Navbar extends Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <div className="w-100 form-group">
-            <input
-              className="w-80 form-control"
-              type="text"
-              placeholder="Busca un punto..."
-              name="search"
-              value={this.state.query}
-              onChange={e => this.handleChangeQuery(e.target.value)}
-            />
-            <button
-              className="w-12 btn btn-inverse"
-              onClick={e => this.handleSearchClick()}
-            >
-              <i className="material-icons">search</i>
-            </button>
-          </div>
+            <div class="form-inline m-0-50">
+              <input
+                class="form-control mr-sm-2"
+                type="text"
+                placeholder="Busca un punto..."
+                name="search"
+                value={this.state.query}
+                onChange={e => this.handleChangeQuery(e.target.value)}
+              />
+              <button class="btn btn-inverse my-2 my-sm-0" type="submit">
+                <i className="material-icons">search</i>
+              </button>
+            </div>
 
           <ul className="navbar-nav  ml-auto">
-            <li><p>{this.props.name + " " + this.props.lastname}</p></li>
+            <li className="white m-0-10">{this.props.name + " " + this.props.lastname}</li>
             <li className="nav-item dropdown">
               <a id="profileMenu" className="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src={Image} width="40" height="40" alt="UserImg" />

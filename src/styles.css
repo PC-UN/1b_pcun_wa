@@ -40,6 +40,9 @@ body{
   font-family: sans-serif, "Open Sans", Helvetica, Arial;
   min-width: 800px !important;
 }
+li, a{
+  font-family: sans-serif, "Open Sans", Helvetica, Arial;
+}
 .edge{
   border: dashed var(--main-green);
 }
@@ -91,7 +94,12 @@ hr{
 .scroll{
   overflow-y: scroll;
 }
-
+.my_visible{
+  visibility: hidden;
+}
+.my_visible:hover{
+  visibility: visible;
+}
 /* ==================================================
   cursores
   ================================================== */

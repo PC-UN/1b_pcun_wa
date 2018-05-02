@@ -27,8 +27,8 @@ class Map extends Component {
             <Marker
               lat={4.61}
               lng={-74.08}
-              name={'Tú'}
               image={'http://i.stack.imgur.com/orZ4x.png'}
+              name={'Tú'}
               handleOpenModal={this.props.handleOpenModal}
               modal={0}
             />
@@ -39,7 +39,7 @@ class Map extends Component {
                   key={m.id}
                   lat={m.latitude}
                   lng={m.longitude}
-                  image={'http://maps.google.com/mapfiles/ms/icons/green-dot.png'}
+                  image={'http://i.stack.imgur.com/orZ4x.png'}
                   handleOpenModal={this.props.handleOpenModal}
                   modal={1}
                 />
