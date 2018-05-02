@@ -1,0 +1,310 @@
+:root {
+    --green-ligth: rgba( 176, 203, 59, 0.5);
+    --main-green: rgb( 134, 177, 44);
+    --gray-ligth: rgb(240, 240, 240);
+    --gray-shadow: rgba(0,0,0,.4);
+}
+/* ==================================================
+  colores
+  azul aguamarina: rgb(20, 158, 128)
+  verde-satart-grad: #18af59
+  verde-satart-grad-dark: rgb(19, 132, 68)
+  green-two: rgb(0, 66, 20)
+  green-three: rgb( 0, 130, 50)
+  black-six: rgb( 24, 14, 14)
+  green-seven: rgb( 176, 203, 59)
+  ================================================== */
+
+/* ==================================================
+  general
+    body
+    edge
+  background-colors
+  width
+  otros
+    shadows
+    hr
+    scroll
+  cursores
+  texto -> estilos personalizados, colores, font-size
+  margin & padding
+  aligment
+  button
+  accordion
+  personalizado
+  modal
+  card
+  ================================================== */
+body{
+  overflow-x: auto;
+  font-family: sans-serif, "Open Sans", Helvetica, Arial;
+  min-width: 800px !important;
+}
+.edge{
+  border: dashed var(--main-green);
+}
+
+/* ==================================================
+  background-colors
+  ================================================== */
+.bg-red{
+  background-color: red;
+}
+.bg-yellow{
+  background-color: yellow;
+}
+.bg-green{
+  background: var(--main-green);
+  /*background: linear-gradient(to bottom right, rgb(19, 132, 68), #53ED6A);
+  background: linear-gradient(#41D681, #18af59, #53ED6A);*/
+}
+.bg-gray{
+  background-color: var(--gray-ligth);
+}
+
+/* ==================================================
+  width
+  ================================================== */
+.w-100{
+  width: 100% !important;
+}
+.w-50{
+  width: 50% !important;
+}
+.w-80{
+  width: 80% !important
+}
+.w-12{
+  width: 12% !important
+}
+
+/* ==================================================
+  otros
+  ================================================== */
+.sdw{
+  box-shadow: 0 0 10px var(--gray-shadow);
+  z-index: 1;
+}
+hr{
+  border-color: var(--green-ligth);
+}
+.scroll{
+  overflow-y: scroll;
+}
+
+/* ==================================================
+  cursores
+  ================================================== */
+.pointer{
+  cursor: pointer;
+}
+
+/* ==================================================
+  texto & colores
+  ================================================== */
+.title{
+  color: rgb( 24, 14, 14) !important;
+}
+.text{
+  font-size: 13px;
+  color: rgb(121, 121, 121);
+}
+
+.white{
+  color: white !important;
+}
+
+.fs-20{
+  font-size: 20px;
+}
+.fs-15{
+  font-size: 15px;
+}
+.fs-13{
+  font-size: 13px;
+}
+
+/* ==================================================
+  margin & padding
+  ================================================== */
+.m-0{
+  margin: 0 !important;
+}
+.m-0-10{
+  margin: 0 10px !important;
+}
+.m-0-50{
+  margin: 0 50px !important;
+}
+.ml-5{
+  margin-left: 5px !important;
+}
+.ml-15{
+  margin-left: 15px !important;
+}
+
+.p-0{
+  padding: 0 !important
+}
+.p-10{
+  padding: 10px !important;
+}
+.p-20{
+  padding: 20px !important;
+}
+.p-10-10-10-20{
+  padding: 10px 10px 10px 20px
+}
+.p-0-10{
+  padding: 0 10px !important;
+}
+.pl-30{
+  padding-left: 30px !important;
+}
+
+/* ==================================================
+  aligment
+  ================================================== */
+.rigth{
+  text-align: right;
+}
+
+/* ==================================================
+  buttons
+  ================================================== */
+.btn-accordion, .btn-accordion:link, .btn-accordion:visited, .btn-accordion:active{
+  width: 100%;
+  border: 0 solid transparent !important;
+  outline: none !important;
+  padding: 0 !important;
+  background-color: transparent;
+  text-align: left;
+  font-size: 18px !important;
+  color: white !important;
+}
+.btn-accordion:hover{
+  cursor: pointer;
+  outline:  !important;
+}
+
+.btn{
+  margin: 0 5px;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.btn-inverse, .btn-inverse:link, .btn-inverse:visited, .btn-inverse:active{
+  height: 38px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+.btn-inverse:hover{
+  background: white;
+  color: var(--main-green);
+}
+
+.btn-small, .btn-small:link, .btn-small:visited, .btn-small:active{
+  border: 1px solid var(--main-green);
+  background-color: white;
+  font-weight: bold;
+  color: var(--main-green);
+}
+.btn-small:hover{
+  background-color: var(--main-green);
+  color: white;
+}
+
+/* ==================================================
+  accordion
+  ================================================== */
+
+.my-card-header{
+  margin-bottom: 1px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  padding: 10px !important;
+}
+
+/* ==================================================
+  navbar
+  ================================================== */
+.navbar-brand {
+  font-size: 30px;
+  color: white !important;
+  font-weight: bold;
+}
+
+#profileMenu{
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+/* ==================================================
+  personalizado
+  ================================================== */
+#menu {
+  box-shadow: 0 0 10px var(--gray-shadow);
+  height: 85vh;
+  overflow-y: scroll;
+  padding: 10px !important;
+  padding-left: 30px !important;
+}
+
+/* ==================================================
+  modal
+  ================================================== */
+
+.Modal {
+  max-width: 500px;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 100px;
+  background:  white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px var(--gray-shadow);
+}
+
+.Modal-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--main-green);
+  color: white;
+  cursor: pointer;
+}
+
+.Modal-close:after {
+  content: "X";
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#modalCard {
+  height: 360px !important;
+  width: inherit !important;
+}
+
+/* ==================================================
+  card
+  ================================================== */
+.card-header{
+  background-color: white !important;
+  border: 0 !important;
+}
+.list-group-item{
+  border: 0 !important;
+}
