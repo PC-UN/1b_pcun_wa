@@ -1,5 +1,5 @@
 :root {
-    --green-ligth: rgba( 176, 203, 59, 0.5);
+    --green-ligth: rgba( 200, 234, 53, 0.8);
     --main-green: rgb( 134, 177, 44);
     --gray-ligth: rgb(240, 240, 240);
     --gray-shadow: rgba(0,0,0,.4);
@@ -61,9 +61,15 @@ li, a{
   /*background: linear-gradient(to bottom right, rgb(19, 132, 68), #53ED6A);
   background: linear-gradient(#41D681, #18af59, #53ED6A);*/
 }
+.bg-green-hv:hover{
+  background: var(--green-ligth);
+  /*background: linear-gradient(to bottom right, rgb(19, 132, 68), #53ED6A);
+  background: linear-gradient(#41D681, #18af59, #53ED6A);*/
+}
 .bg-gray{
   background-color: var(--gray-ligth);
 }
+
 
 /* ==================================================
   width
