@@ -10,7 +10,7 @@ class PointModal extends Component {
       <div className="Modal">
         <button onClick={this.props.handleCloseModal} className="Modal-close"></button>
         <div id="modalCard" className="card edge scroll">
-          <PointQuery id={this.props.id}/>
+          <PointQuery id={this.props.id} handlePoints={this.props.handlePoints}/>
           <CommentsQuery id={this.props.id}/>
           <CommentMutation id={this.props.id}/>
         </div>

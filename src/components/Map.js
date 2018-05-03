@@ -1,21 +1,30 @@
 import React, { Component } from 'react'
 import GoogleMap from 'google-map-react'
 import Marker from './Marker'
+import UserMarker from './UserMarker'
 import '../styles.css'
 
 class Map extends Component {
 
   state = {
-    center: {
-      lat: 4.61,
-      lng: -74.08
-    },
-    zoom: 13,
-    location: false
+			draggable: true,
+	}
+
+  onIteraction = (key, props, mouse) => {
+    this.setState({
+      draggable: false
+    })
+    this.props.handleLocation(mouse.lat, mouse.lng)
+  }
+
+  onIteraction2 = (key, props, mouse) => {
+    this.setState({
+      draggable: true
+    })
   }
 
   render() {
-    console.log(this.props.points)
+    console.log(this.props)
     return(
       <div className="col-8 p-0">
         <div style={{height: '85vh', width: '100%'}}>
@@ -23,13 +32,17 @@ class Map extends Component {
             bootstrapURLKeys={{key: "AIzaSyBgsUkN58dnLonRbc5-6LYrfevHrxv-Rx8"}}
             zoom={this.props.zoom}
             center={this.props.center}
+            draggable={this.state.draggable}
+            onChildMouseDown={this.onIteraction}
+            onChildMouseUp={this.onIteraction2}
+            onChildMouseMove={this.onIteraction}
           >
-            <Marker
-              lat={4.61}
-              lng={-74.08}
+            <UserMarker
+              key={"user"}
+              lat={this.props.user_location.lat}
+              lng={this.props.user_location.lng}
               name={'Tú'}
               image={'http://i.stack.imgur.com/orZ4x.png'}
-              handleOpenModal={this.props.handleOpenModal}
               modal={0}
             />
             {
