@@ -4,6 +4,7 @@ import Menu from './Menu'
 import Map from './Map'
 import Modal from './Modal'
 import PointModal from './PointModal'
+import CampaignModal from './CampaignModal'
 
 const userData = {
   id: 1,
@@ -34,11 +35,15 @@ class Home extends Component {
     points: [],
     modalVisible: false,
     typeModal: 0,
+    user_location: {
+      lat: 4.61,
+      lng: -74.08
+    },
     center: {
       lat: 4.61,
       lng: -74.08
     },
-    zoom: 13,
+    zoom: 16,
     location: false
   }
 
@@ -96,9 +101,9 @@ class Home extends Component {
     })
   }
 
-  handleCenter = (lat, lng, event) => {
+  handleLocation = (lat, lng) => {
     this.setState({
-      center:{
+      user_location:{
         lat: lat,
         lng: lng
       }
@@ -113,6 +118,16 @@ class Home extends Component {
             <PointModal
               id={this.state.id}
               handleCloseModal={this.handleCloseModal}
+              handlePoints={this.handlePoints}
+            />
+          </Modal>
+        )
+      case 2:
+        return(
+          <Modal>
+            <CampaignModal
+              id={this.state.id}
+              handleCloseModal={this.handleCloseModal}
             />
           </Modal>
         )
@@ -123,8 +138,8 @@ class Home extends Component {
 
   render(){
     const currentState = this.state.machine_state
-    console.log("STATE:", currentState)
-    console.log(this.state.center);
+    console.log("M_STATE:", currentState)
+    console.log("STATE", this.state)
     return(
       <div className="row w-100 p-0 m-0">
         <Navbar
@@ -132,14 +147,18 @@ class Home extends Component {
           handlePoints={this.handlePoints}
         />
         <Menu
-          center={this.props.center}
+          user_location={this.state.user_location}
+          center={this.state.center}
           handleOpenModal={this.handleOpenModal}
+          handlePoints={this.handlePoints}
         />
         <Map
           zoom={this.state.zoom}
+          user_location={this.state.user_location}
           center={this.state.center}
           points={this.state.points}
           handleOpenModal={this.handleOpenModal}
+          handleLocation={this.handleLocation}
         />
         {this.renderModal(this.state.typeModal)}
       </div>

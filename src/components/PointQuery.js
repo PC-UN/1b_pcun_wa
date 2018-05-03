@@ -10,6 +10,8 @@ const GET_POINT = gql`
       category
       contact
       email
+      latitude
+      longitude
     }
   }
 `

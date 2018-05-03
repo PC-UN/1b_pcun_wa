@@ -20,6 +20,7 @@ class Favorite extends Component {
         {({loading, error, data}) => {
           if(loading) return "Loading..."
           if(error) return "Error D:"
+          console.log("PROPS", this.props);
           return(
             <div>
               <div id="favorites" className="my-card-header">
@@ -35,7 +36,7 @@ class Favorite extends Component {
                   {
                     data.allFavorites.map(
                       f => (
-                        <div className="pointer bg-green-hv" key={f.id} onClick={(e) => this.props.handleOpenModal(f.id, 1, 4, -74, e)}>
+                        <div className="pointer bg-green-hv" key={f.id} onClick={(e) => this.props.handleOpenModal(f.id, 1, this.props.center.lat, this.props.center.lng, e)}>
                           <p>{f.comment}</p>
                           <hr/>
                         </div>
