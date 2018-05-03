@@ -1,5 +1,6 @@
 :root {
-    --green-ligth: rgba( 200, 234, 53, 0.8);
+    --green-ligth: rgba( 200, 234, 53, 0.5);
+    --green-ligth-1: rgba( 200, 234, 53, 0.8);
     --main-green: rgb( 134, 177, 44);
     --gray-ligth: rgb(240, 240, 240);
     --gray-shadow: rgba(0,0,0,.4);
