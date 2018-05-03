@@ -24,8 +24,9 @@ class CommentMutation extends Component {
       <Mutation mutation={MAKE_COMMENT}>
         {
           createComment => (
-            <div>
+            <div className="p-10">
               <form
+                className="form-inline m-0-50"
                 onSubmit={e => {
                   e.preventDefault()
                   createComment({
@@ -39,11 +40,13 @@ class CommentMutation extends Component {
                 }}
               >
                 <input
+                  className="form-control"
                   ref={
                     content => {i_content = content}
                   }
                 />
                 <button
+                  className="btn btn-small"
                   type="submit"
                 >
                   Comentar

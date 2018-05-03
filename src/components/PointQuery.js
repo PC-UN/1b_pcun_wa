@@ -24,13 +24,13 @@ class PointQuery extends Component {
           if(loading) return "Loading..."
           if(error) return "Error D:"
           return(
-            <div>
+            <div className="p-10">
               <h5>{data.pointById.name}</h5>
-              <ul className="list-group list-group-flush">
-                <li><h6>Categoría: </h6>{data.pointById.category}</li>
-                <li><h6>Dirección: </h6>{data.pointById.address}</li>
-                <li><h6>Contacto: </h6>{data.pointById.contact}</li>
-                <li><h6>E-mail: </h6>{data.pointById.email}</li>
+              <ul className="list-group list-group-flush ml-30">
+                <li><h6 className="title">Categoría: </h6>{data.pointById.category}</li>
+                <li><h6 className="title">Dirección: </h6>{data.pointById.address}</li>
+                <li><h6 className="title">Contacto: </h6>{data.pointById.contact}</li>
+                <li><h6 className="title">E-mail: </h6>{data.pointById.email}</li>
               </ul>
             </div>
           )

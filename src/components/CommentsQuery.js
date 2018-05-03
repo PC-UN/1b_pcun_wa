@@ -22,7 +22,7 @@ class CommentsQuery extends Component {
           if(error) return "Error D:"
           console.log("Comments", data.commentByPoint)
           return(
-            <div className="scroll">
+            <div className="p-10 scroll">
             {
               data.commentByPoint.map(
                 c => (

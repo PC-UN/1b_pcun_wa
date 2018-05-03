@@ -14,6 +14,12 @@ function Menu(props) {
         <Campaigns/>
 
       </div>
+      <div class="rigth">
+        <button class="btn btn-small" type="submit">
+          Cerca a mi <i className="material-icons"> my_location</i>
+        </button>
+      </div>
+
     </div>
   )
 }

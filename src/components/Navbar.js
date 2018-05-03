@@ -64,7 +64,7 @@ class Navbar extends Component {
                 value={this.state.query}
                 onChange={e => this.handleChangeQuery(e.target.value)}
               />
-              <button class="btn btn-inverse my-2 my-sm-0" type="submit">
+              <button class="btn btn-inverse" type="submit">
                 <i className="material-icons">search</i>
               </button>
             </div>

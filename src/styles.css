@@ -41,7 +41,7 @@ body{
   font-family: sans-serif, "Open Sans", Helvetica, Arial;
   min-width: 800px !important;
 }
-li, a{
+li, a, div, h1, h2, h3, h4, h5, h6{
   font-family: sans-serif, "Open Sans", Helvetica, Arial;
 }
 .edge{
@@ -157,6 +157,9 @@ hr{
 .ml-15{
   margin-left: 15px !important;
 }
+.ml-30{
+  margin-left: 30px !important;
+}
 
 .p-0{
   padding: 0 !important
@@ -205,7 +208,6 @@ hr{
 .btn{
   margin: 0 5px;
   border-radius: 5px;
-  padding: 6px;
 }
 
 .btn-inverse, .btn-inverse:link, .btn-inverse:visited, .btn-inverse:active{
@@ -277,7 +279,7 @@ hr{
 .Modal {
   max-width: 500px;
   width: 100%;
-  height: 400px;
+  height: 450px;
   margin: 0 auto;
   position: fixed;
   left: 0;
@@ -309,7 +311,7 @@ hr{
 }
 
 #modalCard {
-  height: 360px !important;
+  height: 410px !important;
   width: inherit !important;
 }
 
