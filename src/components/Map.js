@@ -52,7 +52,7 @@ class Map extends Component {
                   key={m.id}
                   lat={m.latitude}
                   lng={m.longitude}
-                  image={'http://i.stack.imgur.com/orZ4x.png'}
+                  image={'http://maps.google.com/mapfiles/ms/icons/green-dot.png'}
                   handleOpenModal={this.props.handleOpenModal}
                   modal={1}
                 />
