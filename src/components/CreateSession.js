@@ -46,15 +46,20 @@ class CreateSession extends Component {
                 placeholder={"E-mail"}
                 ref={content => {email_i=content}}
               />
+              
               <input
                 className="form-control"
                 placeholder={"Contraseña"}
                 ref={content => {password_i=content}}
               />
+              <br/>
+
               <button
-                className="btn btn-small"
+                className="btn btn-default"
                 type="submit"
-              >Ingresar</button>
+              >
+                Ingresar
+              </button>
             </form>
             {loading && <p>Loading...</p>}
             {error && <p>Contraseña o Email inválidos</p>}
