@@ -1,4 +1,5 @@
 :root {
+    --green-hr: rgb( 202, 230, 117);
     --green-ligth: rgba( 200, 234, 53, 0.5);
     --green-ligth-1: rgba( 200, 234, 53, 0.8);
     --main-green: rgb( 134, 177, 44);
@@ -78,11 +79,14 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 .w-100{
   width: 100% !important;
 }
-.w-50{
-  width: 50% !important;
+.w-95{
+  width: 95% !important
 }
 .w-80{
   width: 80% !important
+}
+.w-50{
+  width: 50% !important;
 }
 .w-12{
   width: 12% !important
@@ -96,7 +100,7 @@ li, a, div, h1, h2, h3, h4, h5, h6{
   z-index: 1;
 }
 hr{
-  border-color: var(--green-ligth);
+  border-color: var(--green-hr);
 }
 .scroll{
   overflow-y: scroll;
@@ -186,7 +190,9 @@ hr{
 .rigth{
   text-align: right;
 }
-
+.center{
+  text-align: center;
+}
 /* ==================================================
   buttons
   ================================================== */
@@ -324,4 +330,15 @@ hr{
 }
 .list-group-item{
   border: 0 !important;
+}
+
+.parent {
+  position: relative;
+  height: 200px;
+}
+
+.absolute {
+  position: absolute;
+  width: 50%;
+  bottom: 10px;
 }
