@@ -8,6 +8,7 @@ import CampaignModal from './CampaignModal'
 import WelcomeModal from './WelcomeModal'
 import LoginModal from './LoginModal'
 import SigninModal from './SigninModal'
+import ErrorModal from './ErrorModal'
 
 const userData = {
   id: 1,
@@ -57,6 +58,7 @@ class Home extends Component {
       lng: -74.08
     },
     zoom: 16,
+    token: "",
     location: false
   }
 
@@ -131,6 +133,13 @@ class Home extends Component {
     })
   }
 
+  handleLogin = (token) => {
+    this.setState({
+      token: token,
+      typeModal: 0
+    })
+  }
+
   renderModal(type) {
     switch (type) {
       case 1://Point modal
@@ -163,13 +172,24 @@ class Home extends Component {
         case 11://Log_in Modal
           return(
             <Modal>
-              <LoginModal/>
+              <LoginModal
+                handleLogin={this.handleLogin}
+                handleTypeModal={this.handleTypeModal}
+              />
             </Modal>
           )
         case 12://Sign_in Modal
           return(
             <Modal>
-              <SigninModal/>
+              <SigninModal
+                handleTypeModal={this.handleTypeModal}
+              />
+            </Modal>
+          )
+        case 99://Error Modal
+          return(
+            <Modal>
+              <ErrorModal/>
             </Modal>
           )
       default:

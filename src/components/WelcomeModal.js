@@ -6,8 +6,12 @@ class WelcomeModal extends Component {
     return(
       <div className="Modal">
         Welcome
-        <button onClick={() => this.props.handleTypeModal(11)}>Log_in</button>
-        <button onClick={() => this.props.handleTypeModal(12)}>Sign_in</button>
+        <button
+          onClick={() => this.props.handleTypeModal(11)}
+        >Log_in</button>
+        <button
+          onClick={() => this.props.handleTypeModal(12)}
+        >Sign_in</button>
       </div>
     )
   }
