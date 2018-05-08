@@ -12,6 +12,7 @@ class PointModal extends Component {
         <button onClick={this.props.handleCloseModal} className="Modal-close"></button>
         <div id="modalCard" className="card edge">
           <PointQuery id={this.props.id}/>
+          <h6>Comentarios:</h6>
           <CommentsQuery id={this.props.id}/>
           <div className="rigth w-100">
           <button class="btn btn-default w-12 my-2 my-sm-0" type="submit">

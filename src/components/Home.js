@@ -43,12 +43,12 @@ class Home extends Component {
     modalVisible: false,
     typeModal: 10,
     user_location: {
-      lat: 4.61,
-      lng: -74.08
+      lat: 4.636351232404465,
+      lng: -74.08184127281243
     },
     center: {
-      lat: 4.61,
-      lng: -74.08
+      lat: 4.636351232404465,
+      lng: -74.08184127281243
     },
     zoom: 16,
     token: "",

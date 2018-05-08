@@ -27,8 +27,7 @@ class CommentsQuery extends Component {
               data.commentByPoint.map(
                 c => (
                   <div key={c._id}>
-                    <p>{c.content}</p>
-                    <p>{c.score}</p>
+                    <p>{c.score + "\t - \t" + c.content}</p>
                   </div>
                 )
               )

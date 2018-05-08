@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import '../styles.css'
+import Logo from '../images/logo.png'
 
 class WelcomeModal extends Component {
   render() {
     return(
       <div className="Modal center">
         <div className="center-vertical">
-          <h1 className="dark-gray center-vertical">Welcome</h1>
+          <img src={Logo} width="60" height="60" className="m-0-10 d-inline-block align-top" alt="PC-UN logo" /><br/>
+          <h1 className="dark-gray center-vertical">PC-UN</h1>
           <br/>
           <br/>
           <button
