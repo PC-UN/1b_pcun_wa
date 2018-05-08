@@ -70,7 +70,7 @@ class Navbar extends Component {
             </div>
 
           <ul className="navbar-nav  ml-auto">
-            <li className="white m-0-10">{this.props.name + " " + this.props.lastname}</li>
+            <li className="white m-0-10">{this.props.username}</li>
             <li className="nav-item dropdown">
               <a id="profileMenu" className="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src={Image} width="40" height="40" alt="UserImg" />

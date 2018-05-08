@@ -58,8 +58,8 @@ class CreateSession extends Component {
             </form>
             {loading && <p>Loading...</p>}
             {error && <p>Contraseña o Email inválidos</p>}
-            {console.log(data)}
-            {data && this.props.handleLogin(data)}
+            {console.log("LOGIN", data)}
+            {data && this.props.handleLogin(data.createSession.jwt)}
           </div>
         )}
       </Mutation>

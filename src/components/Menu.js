@@ -11,7 +11,7 @@ function Menu(props) {
       <div id="accordionMS" className="w-100">
 
         <Filters user_location={props.user_location} handlePoints={props.handlePoints}/>
-        <Favorite center={props.center} handleOpenModal={props.handleOpenModal}/>
+        <Favorite id={props.id} center={props.center} handleOpenModal={props.handleOpenModal}/>
         <Campaigns center={props.center} handleOpenModal={props.handleOpenModal}/>
 
       </div>

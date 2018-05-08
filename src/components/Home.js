@@ -9,14 +9,7 @@ import WelcomeModal from './WelcomeModal'
 import LoginModal from './LoginModal'
 import SigninModal from './SigninModal'
 import ErrorModal from './ErrorModal'
-
-const userData = {
-  id: 1,
-  name: "Jonathan",
-  lastname: "Granados",
-  email: "joagranadosme@unal.edu.co",
-  img: "yo"
-}
+import CheckSession from './CheckSession'
 
 const stateMachine = {
   welcome: {
@@ -59,6 +52,11 @@ class Home extends Component {
     },
     zoom: 16,
     token: "",
+    user: {
+      id: 0,
+      username: "",
+      img: "yo"
+    },
     location: false
   }
 
@@ -136,7 +134,18 @@ class Home extends Component {
   handleLogin = (token) => {
     this.setState({
       token: token,
-      typeModal: 0
+      typeModal: 13
+    })
+  }
+
+  handleCheck = (type, id, username) => {
+    this.setState({
+      typeModal: type,
+      user: {
+        id: id,
+        username: username,
+        img: "yo"
+      }
     })
   }
 
@@ -186,6 +195,13 @@ class Home extends Component {
               />
             </Modal>
           )
+        case 13://Load User Info
+          return(
+            <CheckSession
+              token={this.state.token}
+              handleCheck={this.handleCheck}
+            />
+          )
         case 99://Error Modal
           return(
             <Modal>
@@ -204,10 +220,11 @@ class Home extends Component {
     return(
       <div className="row w-100 p-0 m-0">
         <Navbar
-          {...userData}
+          {...this.state.user}
           handlePoints={this.handlePoints}
         />
         <Menu
+          id={this.state.user.id}
           user_location={this.state.user_location}
           center={this.state.center}
           handleOpenModal={this.handleOpenModal}
