@@ -13,7 +13,7 @@ class PointModal extends Component {
           <PointQuery id={this.props.id}/>
           <CommentsQuery id={this.props.id}/>
           <button class="btn btn-small my-2 my-sm-0" type="submit">
-            <i class="material-icons">favorite_border</i>
+              <i class="material-icons">favorite_border</i>
           </button>
           <CommentMutation id={this.props.id}/>
 
