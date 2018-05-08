@@ -5,6 +5,9 @@ import Map from './Map'
 import Modal from './Modal'
 import PointModal from './PointModal'
 import CampaignModal from './CampaignModal'
+import WelcomeModal from './WelcomeModal'
+import LoginModal from './LoginModal'
+import SigninModal from './SigninModal'
 
 const userData = {
   id: 1,
@@ -15,26 +18,36 @@ const userData = {
 }
 
 const stateMachine = {
+  welcome: {
+    LOGIN: 'log_in',
+    SIGNIN: 'log_in'
+  },
+  log_in: {
+    ERR: 'error',
+    SIGNIN: 'sign_in',
+    SUCCESS: 'idle'
+  },
+  sign_in: {
+    ERR: 'error',
+    LOGIN: 'log_in'
+  },
   idle: {
     SHOW: 'modal'
   },
-  modal: {
-    CLOSE: 'idle'
-  },
   error: {
-    ACCEPT: 'idle'
+    ACCEPT: 'welcome'
   }
 }
 
 class Home extends Component {
 
   state = {
-    machine_state: 'idle',
+    machine_state: 'welcome',
     query: '',
     id: 0,
     points: [],
     modalVisible: false,
-    typeModal: 0,
+    typeModal: 10,
     user_location: {
       lat: 4.61,
       lng: -74.08
@@ -52,11 +65,13 @@ class Home extends Component {
       case 'idle':
         this.showPoints(action.points)
         break;
-      case 'loading':
-        this.showLoading(action)
-        break;
       case 'error':
         this.showError()
+        break;
+      case 'welcome':
+        this.setState({
+          typeModal: 10
+        })
         break;
       default:
         break;
@@ -110,9 +125,15 @@ class Home extends Component {
     })
   }
 
+  handleTypeModal = (type) => {
+    this.setState({
+      typeModal: type
+    })
+  }
+
   renderModal(type) {
     switch (type) {
-      case 1:
+      case 1://Point modal
         return(
           <Modal>
             <PointModal
@@ -122,7 +143,7 @@ class Home extends Component {
             />
           </Modal>
         )
-      case 2:
+      case 2://Campaing modal
         return(
           <Modal>
             <CampaignModal
@@ -131,6 +152,26 @@ class Home extends Component {
             />
           </Modal>
         )
+      case 10://Welcome Modal
+        return(
+          <Modal>
+            <WelcomeModal
+              handleTypeModal={this.handleTypeModal}
+            />
+          </Modal>
+        )
+        case 11://Log_in Modal
+          return(
+            <Modal>
+              <LoginModal/>
+            </Modal>
+          )
+        case 12://Sign_in Modal
+          return(
+            <Modal>
+              <SigninModal/>
+            </Modal>
+          )
       default:
       return(<Modal></Modal>)
     }
