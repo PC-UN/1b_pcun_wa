@@ -58,8 +58,10 @@ class CreateUser extends Component {
                 placeholder={"Contraseña"}
                 ref={content => {password_i=content}}
               />
+              <br/>
+
               <button
-                className="btn btn-small"
+                className="btn btn-small w-80"
                 type="submit"
               >Registarse</button>
             </form>
