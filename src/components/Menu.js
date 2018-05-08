@@ -14,7 +14,9 @@ function Menu(props) {
         <Campaigns center={props.center} handleOpenModal={props.handleOpenModal}/>
       </div>
       <div class="absolute w-80 center">
-        <button class="btn btn-small" type="submit">
+        <button
+          className="btn btn-small"
+        >
           Cerca a mi <i className="material-icons"> my_location</i>
         </button>
       </div>
