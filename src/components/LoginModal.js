@@ -17,7 +17,7 @@ class LoginModal extends Component {
 
           <button
             onClick={() => this.props.handleTypeModal(12)}
-            className="btn btn-default"
+            className="btn btn-small w-80"
           >
             Registrarse
           </button>

@@ -59,9 +59,9 @@ class CreateUser extends Component {
                 ref={content => {password_i=content}}
               />
               <br/>
-              
+
               <button
-                className="btn btn-default"
+                className="btn btn-small w-80"
                 type="submit"
               >Registarse</button>
             </form>

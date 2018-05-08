@@ -42,20 +42,21 @@ class CreateSession extends Component {
               }}
             >
               <input
-                className="form-control"
                 placeholder={"E-mail"}
                 ref={content => {email_i=content}}
-              />
-              
-              <input
                 className="form-control"
+              />
+
+              <input
+                type="password"
                 placeholder={"Contraseña"}
                 ref={content => {password_i=content}}
+                className="form-control"
               />
               <br/>
 
               <button
-                className="btn btn-default"
+                className="btn btn-default w-80"
                 type="submit"
               >
                 Ingresar

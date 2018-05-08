@@ -42,8 +42,8 @@ class Favorite extends Component {
                   {
                     data.FavoriteById.map(
                       f => (
-                        <div className="pointer bg-green-hv" key={f.id} onClick={(e) => this.props.handleOpenModal(f.place_id, 1, this.props.center.lat, this.props.center.lng, e)}>
-                          <p>{f.comment}</p>
+                        <div className="pointer" key={f.id} onClick={(e) => this.props.handleOpenModal(f.place_id, 1, this.props.center.lat, this.props.center.lng, e)}>
+                          <p className="bg-green-hv">{f.comment}</p>
                           <hr/>
                         </div>
                       )

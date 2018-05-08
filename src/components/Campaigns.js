@@ -34,7 +34,7 @@ class Campaigns extends Component {
                     data.allCampaigns.map(
                       c => (
                         <div key={c._id} onClick={(e) => this.props.handleOpenModal(c._id, 2, this.props.center.lat, this.props.center.lng, e)}>
-                          <p>{c.name}</p>
+                          <p className="bg-green-hv pointer">{c.name}</p>
                           <hr/>
                         </div>
                       )

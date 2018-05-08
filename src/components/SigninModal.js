@@ -7,14 +7,14 @@ class SigninModal extends Component {
     return(
       <div className="Modal center">
         <div className="center-vertical">
-          <h2 className="dark-gray">Resgistrarse</h2>
+          <h2 className="dark-gray">Registrarse</h2>
           <br/>
           <br/>
 
           <CreateUser/>
           <button
             onClick={() => this.props.handleTypeModal(11)}
-            className="btn btn-default"
+            className="btn btn-default w-80"
           >
             Ingresar
           </button>

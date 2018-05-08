@@ -188,6 +188,9 @@ hr{
 .p-0-10{
   padding: 0 10px !important;
 }
+.p-0-20{
+  padding: 0 20px !important;
+}
 .pl-30{
   padding-left: 30px !important;
 }
@@ -236,6 +239,7 @@ hr{
   margin: 5px;
   border: 1px solid var(--main-green);
   background-color: white;
+  padding: 0 5px; 
   font-weight: bold;
   color: var(--main-green);
 }
@@ -337,7 +341,7 @@ hr{
 }
 
 .Modal-close:after {
-  content: "X";
+  content: "x";
   font-weight: bold;
   font-size: 25px;
 }
