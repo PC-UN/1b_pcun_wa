@@ -131,11 +131,14 @@ class Home extends Component {
     })
   }
 
-  handleLogin = (token) => {
-    this.setState({
-      token: token,
-      typeModal: 13
-    })
+  handleLogin = (data) => {
+    console.log("DATA R", data);
+    if(data.auth.answer === "true"){
+      this.setState({
+        token: data.createSession.jwt,
+        typeModal: 13
+      })
+    }    
   }
 
   handleCheck = (type, id, username) => {

@@ -61,7 +61,7 @@ class CreateUser extends Component {
               <br/>
 
               <button
-                className="btn btn-small w-80"
+                className="btn btn-default w-80"
                 type="submit"
               >Registarse</button>
             </form>
