@@ -55,16 +55,16 @@ class Navbar extends Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <div class="form-inline m-0-50">
+            <div className="form-inline m-0-50">
               <input
-                class="form-control mr-sm-2"
+                className="form-control mr-sm-2"
                 type="text"
                 placeholder="Busca un punto..."
                 name="search"
                 value={this.state.query}
                 onChange={e => this.handleChangeQuery(e.target.value)}
               />
-              <button class="btn btn-inverse" onClick={e => this.handleSearchClick()}>
+              <button className="btn btn-inverse" onClick={e => this.handleSearchClick()}>
                 <i className="material-icons">search</i>
               </button>
             </div>
@@ -77,7 +77,7 @@ class Navbar extends Component {
               </a>
               <div className="dropdown-menu dropdown-menu-right" aria-labelledby="profileMenu">
                 <a className="dropdown-item" href="#">Editar</a>
-                <a className="dropdown-item" href="#">Cerrar sesión</a>
+                <a className="dropdown-item" onClick={(e) => this.props.handleCloseSession(e)} href="#">Cerrar sesión</a>
               </div>
             </li>
           </ul>

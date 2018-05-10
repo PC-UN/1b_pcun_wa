@@ -71,7 +71,7 @@ class CreateSession extends Component {
               </button>
             </form>
             {loading && <p>Loading...</p>}
-            {error && <p>Contraseña o Email inválidos</p>}
+            {error && this.props.handleTypeModal(99, error)}
             {console.log("LOGIN", data)}
             {data && this.props.handleLogin(data)}
           </div>

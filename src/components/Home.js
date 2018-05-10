@@ -50,14 +50,16 @@ class Home extends Component {
       lat: 4.636351232404465,
       lng: -74.08184127281243
     },
-    zoom: 16,
+    zoom: 15,
     token: "",
     user: {
       id: 0,
       username: "",
       img: "yo"
     },
-    location: false
+    location: false,
+    error_m: "",
+    flag: false
   }
 
   command(nextState, action) {
@@ -112,7 +114,14 @@ class Home extends Component {
 
   handlePoints = (points) => {
     this.setState({
-      points: points
+      points: points,
+      flag: false
+    })
+  }
+
+  handleRefresh = () => {
+    this.setState({
+      flag: true
     })
   }
 
@@ -125,9 +134,10 @@ class Home extends Component {
     })
   }
 
-  handleTypeModal = (type) => {
+  handleTypeModal = (type, error_m) => {
     this.setState({
-      typeModal: type
+      typeModal: type,
+      error_m: error_m
     })
   }
 
@@ -138,7 +148,7 @@ class Home extends Component {
         token: data.createSession.jwt,
         typeModal: 13
       })
-    }    
+    }
   }
 
   handleCheck = (type, id, username) => {
@@ -147,6 +157,18 @@ class Home extends Component {
       user: {
         id: id,
         username: username,
+        img: "yo"
+      }
+    })
+  }
+
+  handleCloseSession = (event) => {
+    this.setState({
+      typeModal: 10,
+      token: "",
+      user: {
+        id: 0,
+        username: "",
         img: "yo"
       }
     })
@@ -208,12 +230,53 @@ class Home extends Component {
         case 99://Error Modal
           return(
             <Modal>
-              <ErrorModal/>
+              <ErrorModal
+                error={this.state.error_m}
+                handleTypeModal={this.handleTypeModal}
+              />
             </Modal>
           )
       default:
       return(<Modal></Modal>)
     }
+  }
+
+  componentWillMount() {
+    console.log("Will Mount")
+    const session = sessionStorage.getItem('state')
+    const user = JSON.parse(sessionStorage.getItem('user'))
+    console.log(session)
+    console.log(user["id"])
+    if(user!==undefined && user["id"]!=0){
+      this.setState({
+        machine_state: session.machine_state,
+        query: session.query,
+        id: session.id,
+        modalVisible: session.modalVisible,
+        typeModal: 13,
+        user_location: {
+          lat: 4.636351232404465,
+          lng: -74.08184127281243
+        },
+        center: {
+          lat: 4.636351232404465,
+          lng: -74.08184127281243
+        },
+        user: user,
+        zoom: 15,
+        token: session.token,
+        location: session.location,
+        error_m: "",
+        flag: false
+      })
+    }
+  }
+
+  componentDidUpdate() {
+    console.log("UPDATED");
+    sessionStorage.setItem('state', JSON.stringify(this.state))
+    sessionStorage.setItem('user', JSON.stringify(this.state.user))
+    console.log("DID", sessionStorage.getItem('state'))
   }
 
   render(){
@@ -225,9 +288,11 @@ class Home extends Component {
         <Navbar
           {...this.state.user}
           handlePoints={this.handlePoints}
+          handleCloseSession={this.handleCloseSession}
         />
         <Menu
           id={this.state.user.id}
+          flag={this.state.flag}
           user_location={this.state.user_location}
           center={this.state.center}
           handleOpenModal={this.handleOpenModal}

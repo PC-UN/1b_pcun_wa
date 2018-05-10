@@ -22,8 +22,8 @@ class Filters extends Component {
     })
   }
 
-  getPoints(){
-    if(this.state.flag){
+  getPoints(flag){
+    if(flag){
       return(
         <PointsByCategory
           center={this.props.user_location}
@@ -60,7 +60,7 @@ class Filters extends Component {
             <hr/>
           </div>
         </div>
-        {this.getPoints()}
+        {this.getPoints(this.state.flag)}
       </div>
     )
   }

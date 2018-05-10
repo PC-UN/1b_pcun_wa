@@ -66,7 +66,7 @@ class CreateUser extends Component {
               >Registarse</button>
             </form>
             {loading && <p>Loading...</p>}
-            {error && <p>Error D:</p>}
+            {error && this.props.handleTypeModal(99, error)}
             {data && <p>
               Te has registrado satisfactoriamente.
             </p>}

@@ -11,7 +11,10 @@ class SigninModal extends Component {
           <br/>
           <br/>
 
-          <CreateUser/>
+          <CreateUser
+            handleTypeModal={this.props.handleTypeModal}
+          />
+
           <button
             onClick={() => this.props.handleTypeModal(11)}
             className="btn btn-default w-80"
