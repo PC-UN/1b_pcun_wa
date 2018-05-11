@@ -239,7 +239,7 @@ hr{
   margin: 5px;
   border: 1px solid var(--main-green);
   background-color: white;
-  padding: 0 5px; 
+  padding: 0 5px;
   font-weight: bold;
   color: var(--main-green);
 }
@@ -313,6 +313,7 @@ hr{
 /* ==================================================
   modal
   ================================================== */
+
 .Modal {
   position: fixed;
   margin: 0 auto;
@@ -325,6 +326,11 @@ hr{
   border-radius: 20px;
   background:  white;
   box-shadow: 0 0 10px var(--gray-shadow);
+}
+
+.dialogIsOpen {
+  -webkit-filter: blur(5px) grayscale(50%);
+  /*-webkit-transform: scale(0.9);*/
 }
 
 .Modal-close {

@@ -177,6 +177,7 @@ class Home extends Component {
               handleTypeModal={this.handleTypeModal}
             />
           </Modal>
+
         )
         case 11://Log_in Modal
           return(
@@ -215,8 +216,8 @@ class Home extends Component {
 
   render(){
     const currentState = this.state.machine_state
-    console.log("M_STATE:", currentState)
-    console.log("STATE", this.state)
+    //console.log("M_STATE:", currentState)
+    //console.log("STATE", this.state)
     return(
       <div className="row w-100 p-0 m-0">
         <Navbar

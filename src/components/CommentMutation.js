@@ -26,7 +26,7 @@ class CommentMutation extends Component {
           createComment => (
             <div className="p-10">
               <form
-                className="form-inline m-0-50"
+                className="form-inline"
                 onSubmit={e => {
                   e.preventDefault()
                   createComment({
