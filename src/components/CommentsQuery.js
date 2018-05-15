@@ -40,7 +40,7 @@ class CommentsQuery extends Component {
           let i_content
           return(
             <div>
-              <div className="p-10 scroll">
+              <div className="p-10 scroll" style={{maxHeight: "100px"}}>
               {
                 data.commentByPoint.map(
                   c => (

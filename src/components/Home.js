@@ -241,13 +241,15 @@ class Home extends Component {
     }
   }
 
+
   componentWillMount() {
     console.log("Will Mount")
     const session = sessionStorage.getItem('state')
     const user = JSON.parse(sessionStorage.getItem('user'))
     console.log(session)
-    console.log(user["id"])
-    if(user!==undefined && user["id"]!=0){
+    console.log(user)
+    if(user!==null){
+      if(user["id"]!=0){
       this.setState({
         machine_state: session.machine_state,
         query: session.query,
@@ -271,6 +273,7 @@ class Home extends Component {
       })
     }
   }
+}
 
   componentDidUpdate() {
     console.log("UPDATED");
