@@ -245,8 +245,9 @@ class Home extends Component {
     console.log("Will Mount")
     const session = sessionStorage.getItem('state')
     const user = JSON.parse(sessionStorage.getItem('user'))
-    console.log(session)
-    console.log(user["id"])
+    //console.log(session)
+    console.log(user)
+    if(user !== null){
     if(user!==undefined && user["id"]!=0){
       this.setState({
         machine_state: session.machine_state,
@@ -269,6 +270,7 @@ class Home extends Component {
         error_m: "",
         flag: false
       })
+    }
     }
   }
 

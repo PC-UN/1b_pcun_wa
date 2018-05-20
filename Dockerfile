@@ -1,12 +1,17 @@
-FROM node:8.9.0
+FROM node:9.6.1
 
-ENV NPM_CONFIG_LEVEL warn 
-RUN npm install -g serve
-CMD ["serve", "-s", "build", "-p", "3000"]
-EXPOSE 3000
-COPY package.json package.json
-COPY npm-shrinkwrap.json npm-shrinkwrap.json
-RUN npm install
-COPY . .
-RUN npm run build --production
+# set working directory
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+
+# add `/usr/src/app/node_modules/.bin` to $PATH
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+# install and cache app dependencies
+COPY package.json /usr/src/app/package.json
+RUN npm install --silent
+RUN npm install react-scripts@1.1.1 -g --silent
+
+# start app
+CMD ["npm", "start"]
 
