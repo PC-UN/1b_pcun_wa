@@ -9,6 +9,9 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
 COPY package.json /usr/src/app/package.json
+COPY images/ /usr/src/app/images/
+COPY public/ /usr/src/app/public/
+COPY src/ /usr/src/app/src/
 RUN npm install --silent
 RUN npm install react-scripts@1.1.1 -g --silent
 
