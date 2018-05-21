@@ -1,19 +1,20 @@
 :root {
     --green-hr: rgb( 202, 230, 117);
+
     --green-ligth: rgb(229, 249, 189);
-    --main-green: rgb( 134, 177, 44);
-    --green-dark: rgb( 127, 180, 20);
     --green-fluor: rgb(160, 228, 24);
+    --green-dark: rgb( 127, 180, 20);
+    --black-pc: rgb(82, 80, 80);
 
     --gray-shadow: rgba(0,0,0,.4);
     --gray-shadow-dark: rgb(61, 58, 58);
 
-    --black-pc: rgb(82, 80, 80);
 
+
+    --green-pc: rgb(229, 249, 189);
     --orange-pc: rgb(237, 160, 69);
     --rose-pc: rgb(223, 101, 74);
     --fucsia-pc: rgb(204, 55, 109);
-
 }
 /* ==================================================
   colores
@@ -156,6 +157,10 @@ hr{
   font-family: 'Fredericka the Great', cursive;
   font-size: 40px;
 }
+.title-signin{/*y login*/
+  color: var(--green-dark);
+  font-family: 'Fredericka the Great', cursive;
+}
 .title-login{
   color: var(--rose-pc);
   font-family: 'Fredericka the Great', cursive;
@@ -273,16 +278,15 @@ hr{
   box-shadow: 2px 2px 0px var(--gray-shadow-dark);
 }
 
-.btn-login {
+.btn-signin { /*y login*/
   margin: 3px;
   width: 40%;
   border: none;
   border-radius: 10px;
-  /*border: solid 3px var(--black-pc);*/
   background-color: var(--black-pc);
   padding: 5px 15px;
   font-size: 20px;
-  font-family: cursive;
+  font-family: 'Fredericka the Great', cursive;
   color: white;
   position:relative;
   box-shadow: 5px 5px 0px var(--gray-shadow-dark);
@@ -290,19 +294,12 @@ hr{
   -webkit-transition: background 1s, top 0.2s; /* Safari */
   transition: background 1s, top 0.2s;
 }
-.btn-login:hover {
+.btn-signin:hover {/*y login*/
   top: 3px;
   left: 3px;
-  background-color: var(--rose-pc);
+  background-color: var(--green-dark);
   cursor: pointer;
   box-shadow: 2px 2px 0px var(--gray-shadow-dark);
-}
-
-.btn-login:active {
-  outline: none !important;
-  border: none;
-  top:3px;
-  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #999;
 }
 
 .btn-accordion, .btn-accordion:link, .btn-accordion:visited, .btn-accordion:active{
@@ -403,7 +400,6 @@ hr{
 /* ==================================================
   modal
   ================================================== */
-
 .modal-welcome{
   position: fixed;
   margin: 0 auto;
@@ -417,7 +413,8 @@ hr{
   background: var(--black-pc);
   box-shadow: 0 0 10px var(--gray-shadow);
 }
-.modal-login{
+
+.modal-signin{
   position: fixed;
   margin: 0 auto;
   left: 0;
@@ -427,17 +424,11 @@ hr{
   line-height: 450px;
   height: 450px;
   border-radius: 20px;
-  padding: 10px;
-  background: rgba(209, 243, 134, 0.7);
+  background: white;
   box-shadow: 0 0 10px var(--gray-shadow);
 }
-.modal-login-inner-div{
-  border-radius: 20px;
-  border: solid 3px white;
-  height: 100%;
-}
 
-.Modal {
+  .Modal {
   position: fixed;
   margin: 0 auto;
   left: 0;
@@ -513,7 +504,7 @@ hr{
 /* ==================================================
   form
   ================================================== */
-.form-control-login{
+.form-control-signin{/*y login*/
   margin: 3px;
   width: 80%;
   border: 1px solid #ced4da;
