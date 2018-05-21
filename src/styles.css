@@ -12,6 +12,7 @@
 
     --orange-pc: rgb(237, 160, 69);
     --rose-pc: rgb(223, 101, 74);
+    --fucsia-pc: rgb(204, 55, 109);
 
 }
 /* ==================================================
@@ -82,7 +83,7 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 
 
 /* ==================================================
-  width
+  width & margin
   ================================================== */
 .w-100{
   width: 100% !important;
@@ -104,6 +105,9 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 }
 .h-90{
   height: 90% !important
+}
+.h-95{
+  height: 95% !important
 }
 
 /* ==================================================
@@ -260,37 +264,36 @@ hr{
 
   -webkit-transition: background 1s, top 0.2s; /* Safari */
   transition: background 1s, top 0.2s;
-  -webkit-transition-delay: 0.2s; /* Safari */
-   transition-delay: 0.2s;
 }
 .btn-welcome:hover {
   top: 3px;
   left: 3px;
   cursor: pointer;
+  background: var(--fucsia-pc);
   box-shadow: 2px 2px 0px var(--gray-shadow-dark);
 }
 
 .btn-login {
-  margin: 5px;
+  margin: 3px;
+  width: 40%;
   border: none;
   border-radius: 10px;
   /*border: solid 3px var(--black-pc);*/
   background-color: var(--black-pc);
   padding: 5px 15px;
   font-size: 20px;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: cursive;
   color: white;
   position:relative;
   box-shadow: 5px 5px 0px var(--gray-shadow-dark);
 
   -webkit-transition: background 1s, top 0.2s; /* Safari */
   transition: background 1s, top 0.2s;
-  -webkit-transition-delay: 0.2s; /* Safari */
-   transition-delay: 0.2s;
 }
 .btn-login:hover {
   top: 3px;
   left: 3px;
+  background-color: var(--rose-pc);
   cursor: pointer;
   box-shadow: 2px 2px 0px var(--gray-shadow-dark);
 }
@@ -424,8 +427,14 @@ hr{
   line-height: 450px;
   height: 450px;
   border-radius: 20px;
-  background: var(--green-ligth);
+  padding: 10px;
+  background: rgba(209, 243, 134, 0.7);
   box-shadow: 0 0 10px var(--gray-shadow);
+}
+.modal-login-inner-div{
+  border-radius: 20px;
+  border: solid 3px white;
+  height: 100%;
 }
 
 .Modal {
@@ -499,4 +508,22 @@ hr{
 .flex-box {
   display: flex;
   background-color: DodgerBlue;
+}
+
+/* ==================================================
+  form
+  ================================================== */
+.form-control-login{
+  margin: 3px;
+  width: 80%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  line-height: 1.5;
+  font-size: 20px;
+  color: var(--black-pc);
+
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
