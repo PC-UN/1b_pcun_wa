@@ -48,7 +48,7 @@ class FavoriteMutation extends Component {
             </div>
           )
         }
-      </Mutation>        
+      </Mutation>
     )
   }
 }
