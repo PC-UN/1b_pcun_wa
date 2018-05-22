@@ -47,8 +47,8 @@ class Filters extends Component {
         <div id="collapseFour" className="collapse" aria-labelledby="points" data-parent="#accordionMS">
           <div className="card-body">
             <hr/>
-            <h6 className="title">Tipo de residuo</h6>
-            <form action="" className="p-0-10">
+            <h6 className="title white">Tipo de residuo</h6>
+            <form action="" className="p-0-10 white">
               <input type="radio" name="category" value="Pilas" onClick={(e) => this.handleCheck(e.target.value)}/>Pilas<br/>
               <input type="radio" name="category" value="Medicamentos" onClick={(e) => this.handleCheck(e.target.value)}/>Medicamentos<br/>
               <input type="radio" name="category" value="Llantas" onClick={(e) => this.handleCheck(e.target.value)}/>Llantas<br/>
