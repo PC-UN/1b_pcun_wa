@@ -7,7 +7,7 @@ import '../styles.css'
 function Menu(props) {
   console.log("MENU PROPS", props);
   return(
-    <div id="menu" className="col-4 parent">
+    <div className="col-4 menu">
       <div id="accordionMS" className="w-95">
         <Filters user_location={props.user_location} handlePoints={props.handlePoints}/>
         <Favorite id={props.id} center={props.center} handleOpenModal={props.handleOpenModal}/>
