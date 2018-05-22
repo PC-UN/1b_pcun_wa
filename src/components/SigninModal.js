@@ -5,9 +5,9 @@ import CreateUser from './CreateUser'
 class SigninModal extends Component {
   render() {
     return(
-      <div className="Modal center">
+      <div className="modal-signin center">
         <div className="center-vertical">
-          <h2 className="dark-gray">Registrarse</h2>
+          <h1 className="title-signin">Registrarse</h1>
           <br/>
           <br/>
 
@@ -17,7 +17,7 @@ class SigninModal extends Component {
 
           <button
             onClick={() => this.props.handleTypeModal(11)}
-            className="btn btn-default w-80"
+            className="btn-signin"
           >
             Ingresar
           </button>

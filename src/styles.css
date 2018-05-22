@@ -1,12 +1,20 @@
 :root {
     --green-hr: rgb( 202, 230, 117);
-    --green-ligth: rgba( 200, 234, 53, 0.5);
-    --green-ligth-1: rgba( 200, 234, 53, 0.8);
-    --main-green: rgb( 134, 177, 44);
-    --gray-ligth: rgb(240, 240, 240);
-    --gray-shadow: rgba(0,0,0,.4);
-    --green-dark: rgb( 108, 103, 84);
 
+    --green-ligth: rgb(229, 249, 189);
+    --green-fluor: rgb(160, 228, 24);
+    --green-dark: rgb( 127, 180, 20);
+    --black-pc: rgb(82, 80, 80);
+
+    --gray-shadow: rgba(0,0,0,.4);
+    --gray-shadow-dark: rgb(61, 58, 58);
+
+
+
+    --green-pc: rgb(229, 249, 189);
+    --orange-pc: rgb(237, 160, 69);
+    --rose-pc: rgb(223, 101, 74);
+    --fucsia-pc: rgb(204, 55, 109);
 }
 /* ==================================================
   colores
@@ -76,13 +84,16 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 
 
 /* ==================================================
-  width
+  width & margin
   ================================================== */
 .w-100{
   width: 100% !important;
 }
 .w-95{
   width: 95% !important
+}
+.w-90{
+  width: 90% !important
 }
 .w-80{
   width: 80% !important
@@ -92,6 +103,12 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 }
 .w-12{
   width: 12% !important
+}
+.h-90{
+  height: 90% !important
+}
+.h-95{
+  height: 95% !important
 }
 
 /* ==================================================
@@ -123,6 +140,11 @@ hr{
 /* ==================================================
   texto & colores
   ================================================== */
+.navbar-title{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 10px;
+  color: red;
+}
 .title{
   color: rgb( 24, 14, 14) !important;
 }
@@ -130,9 +152,25 @@ hr{
   font-size: 13px;
   color: rgb(121, 121, 121);
 }
+.title-welcome{
+  color: white;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+}
+.title-signin{/*y login*/
+  color: var(--green-dark);
+  font-family: 'Fredericka the Great', cursive;
+}
+.title-login{
+  color: var(--rose-pc);
+  font-family: 'Fredericka the Great', cursive;
+}
 
 .dark-gray{
   color: var(--green-dark);
+}
+.green-fluor{
+  color: var(--green-fluor);
 }
 .white{
   color: white !important;
@@ -215,6 +253,55 @@ hr{
 /* ==================================================
   buttons
   ================================================== */
+.btn-welcome {
+  margin: 5px;
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+  /*border: solid 3px var(--black-pc);*/
+  background-color: var(--green-dark);
+  padding: 5px 15px;
+  font-size: 30px;
+  font-family: 'Fredericka the Great', cursive;
+  color: white;
+  position:relative;
+  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+  -webkit-transition: background 1s, top 0.2s; /* Safari */
+  transition: background 1s, top 0.2s;
+}
+.btn-welcome:hover {
+  top: 3px;
+  left: 3px;
+  cursor: pointer;
+  background: var(--fucsia-pc);
+  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+}
+
+.btn-signin { /*y login*/
+  margin: 3px;
+  width: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--black-pc);
+  padding: 5px 15px;
+  font-size: 20px;
+  font-family: 'Fredericka the Great', cursive;
+  color: white;
+  position:relative;
+  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+  -webkit-transition: background 1s, top 0.2s; /* Safari */
+  transition: background 1s, top 0.2s;
+}
+.btn-signin:hover {/*y login*/
+  top: 3px;
+  left: 3px;
+  background-color: var(--green-dark);
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+}
+
 .btn-accordion, .btn-accordion:link, .btn-accordion:visited, .btn-accordion:active{
   width: 100%;
   border: 0 solid transparent !important;
@@ -239,7 +326,7 @@ hr{
   margin: 5px;
   border: 1px solid var(--main-green);
   background-color: white;
-  padding: 0 5px; 
+  padding: 0 5px;
   font-weight: bold;
   color: var(--main-green);
 }
@@ -313,7 +400,35 @@ hr{
 /* ==================================================
   modal
   ================================================== */
-.Modal {
+.modal-welcome{
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 100px;
+  max-width: 500px;
+  line-height: 450px;
+  height: 450px;
+  border-radius: 20px;
+  background: var(--black-pc);
+  box-shadow: 0 0 10px var(--gray-shadow);
+}
+
+.modal-signin{
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 100px;
+  max-width: 500px;
+  line-height: 450px;
+  height: 450px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 0 10px var(--gray-shadow);
+}
+
+  .Modal {
   position: fixed;
   margin: 0 auto;
   left: 0;
@@ -325,6 +440,11 @@ hr{
   border-radius: 20px;
   background:  white;
   box-shadow: 0 0 10px var(--gray-shadow);
+}
+
+.dialogIsOpen {
+  -webkit-filter: blur(5px) grayscale(50%);
+  /*-webkit-transform: scale(0.9);*/
 }
 
 .Modal-close {
@@ -379,4 +499,22 @@ hr{
 .flex-box {
   display: flex;
   background-color: DodgerBlue;
+}
+
+/* ==================================================
+  form
+  ================================================== */
+.form-control-signin{/*y login*/
+  margin: 3px;
+  width: 80%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  line-height: 1.5;
+  font-size: 20px;
+  color: var(--black-pc);
+
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

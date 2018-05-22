@@ -42,26 +42,29 @@ class CreateUser extends Component {
                 email_i.value=""
                 password_i.value=""
               }}
+              className="center"
             >
               <input
-                className="form-control"
+                className="form-control-signin"
                 placeholder={"Username"}
                 ref={content => {username_i=content}}
               />
               <input
-                className="form-control"
+                className="form-control-signin"
                 placeholder={"E-mail"}
                 ref={content => {email_i=content}}
               />
               <input
-                className="form-control"
+              type="password"
+              className="form-control-signin"
                 placeholder={"Contraseña"}
                 ref={content => {password_i=content}}
               />
               <br/>
+              <br/>
 
               <button
-                className="btn btn-default w-80"
+                className="btn-signin"
                 type="submit"
               >Registarse</button>
             </form>

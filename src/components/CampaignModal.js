@@ -28,18 +28,20 @@ class CampaignModal extends Component {
           if(loading) return "Loading"
           if(error) return "Error D:"
           return(
-            <div className="Modal">
-              <button onClick={this.props.handleCloseModal} className="Modal-close"></button>
-              <div id="modalCard" className="card edge scroll">
-                {data.campaignById.name}
-                {data.campaignById.city}
-                {data.campaignById.address}
-                {data.campaignById.ubication}
-                {data.campaignById.created_date}
-                {data.campaignById.start_date}
-                {data.campaignById.end_date}
-                {data.campaignById.status}
-                {data.campaignById.program}
+            <div className="Modal center p-0-20">
+              <div className="center-vertical">
+                <button onClick={this.props.handleCloseModal} className="Modal-close"></button>
+                <div id="modalCard" className="card edge scroll">
+                  {data.campaignById.name}
+                  {data.campaignById.city}
+                  {data.campaignById.address}
+                  {data.campaignById.ubication}
+                  {data.campaignById.created_date}
+                  {data.campaignById.start_date}
+                  {data.campaignById.end_date}
+                  {data.campaignById.status}
+                  {data.campaignById.program}
+                </div>
               </div>
             </div>
           )

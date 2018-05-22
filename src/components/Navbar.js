@@ -49,7 +49,7 @@ class Navbar extends Component {
       <nav className="navbar p-20 navbar-expand navbar-light bg-green w-100">
         <a className="navbar-brand" href="#">
           <img src={Logo} width="40" height="40" className="m-0-10 d-inline-block align-top" alt="PC-UN logo" />
-          PC-UN
+          <h1 className="navbar-title">PC-UN</h1>
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

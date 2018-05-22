@@ -40,12 +40,13 @@ class CommentsQuery extends Component {
           let i_content
           return(
             <div>
-              <div className="p-10 scroll" style={{maxHeight: "100px"}}>
+              <div className="p-10 scroll" style={{minHeight:"100px"}}>
               {
                 data.commentByPoint.map(
                   c => (
                     <div key={c._id}>
-                      <p>{c.score + "\t - \t" + c.content}</p>
+                      <p>{c.content}</p>
+                      <p>{c.score}</p>
                     </div>
                   )
                 )

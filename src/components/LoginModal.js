@@ -5,9 +5,9 @@ import CreateSession from './CreateSession'
 class LoginModal extends Component {
   render() {
     return(
-      <div className="Modal center">
+      <div className="modal-signin center">
         <div className="center-vertical">
-          <h2 className="dark-gray">Iniciar Sesión</h2>
+          <h1 className="title-signin">Iniciar Sesión</h1>
           <br/>
           <br/>
 
@@ -18,7 +18,7 @@ class LoginModal extends Component {
 
           <button
             onClick={() => this.props.handleTypeModal(12)}
-            className="btn btn-default w-80"
+            className="btn-signin"
           >
             Registrarse
           </button>
