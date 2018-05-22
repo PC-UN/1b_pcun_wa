@@ -246,34 +246,34 @@ class Home extends Component {
     console.log("Will Mount")
     const session = sessionStorage.getItem('state')
     const user = JSON.parse(sessionStorage.getItem('user'))
-    console.log(session)
+    //console.log(session)
     console.log(user)
-    if(user!==null){
-      if(user["id"]!=0){
-      this.setState({
-        machine_state: session.machine_state,
-        query: session.query,
-        id: session.id,
-        modalVisible: session.modalVisible,
-        typeModal: 13,
-        user_location: {
-          lat: 4.636351232404465,
-          lng: -74.08184127281243
-        },
-        center: {
-          lat: 4.636351232404465,
-          lng: -74.08184127281243
-        },
-        user: user,
-        zoom: 15,
-        token: session.token,
-        location: session.location,
-        error_m: "",
-        flag: false
-      })
+    if(user !== null){
+      if(user!==undefined && user["id"]!=0){
+        this.setState({
+          machine_state: session.machine_state,
+          query: session.query,
+          id: session.id,
+          modalVisible: session.modalVisible,
+          typeModal: 13,
+          user_location: {
+            lat: 4.636351232404465,
+            lng: -74.08184127281243
+          },
+          center: {
+            lat: 4.636351232404465,
+            lng: -74.08184127281243
+          },
+          user: user,
+          zoom: 15,
+          token: session.token,
+          location: session.location,
+          error_m: "",
+          flag: false
+        })
+      }
     }
   }
-}
 
   componentDidUpdate() {
     console.log("UPDATED");
