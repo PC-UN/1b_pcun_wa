@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
+import FavoriteMutation from './FavoriteMutation'
 
 const GET_POINT = gql`
   query pointById($id: Int!){
@@ -34,6 +35,11 @@ class PointQuery extends Component {
                 <li><span className="title">Contacto: </span>{data.pointById.contact}</li>
                 <li><span className="title">E-mail: </span>{data.pointById.email}</li>
               </ul>
+              <FavoriteMutation
+                user_id={this.props.user_id}
+                place_id={this.props.id}
+                comment={data.pointById.name}
+              />
             </div>
           )
         }}

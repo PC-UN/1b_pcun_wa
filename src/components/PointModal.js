@@ -11,12 +11,8 @@ class PointModal extends Component {
         <div className="center-vertical scroll edge">
         <button onClick={this.props.handleCloseModal} className="Modal-close"></button>
         <div id="modalCard" className="card">
-          <PointQuery id={this.props.id}/>
+          <PointQuery id={this.props.id} user_id={this.props.user_id}/>
           <CommentsQuery id={this.props.id}/>
-          <br/>
-          <button class="btn btn-default w-12" style={{minHeight:"25px"}} type="submit">
-              <i class="material-icons">favorite_border</i>
-          </button>
           <br/>
           <CommentMutation id={this.props.id}/>
         </div>

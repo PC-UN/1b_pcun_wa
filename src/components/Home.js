@@ -181,6 +181,7 @@ class Home extends Component {
           <Modal>
             <PointModal
               id={this.state.id}
+              user_id={this.state.user.id}
               handleCloseModal={this.handleCloseModal}
               handlePoints={this.handlePoints}
             />

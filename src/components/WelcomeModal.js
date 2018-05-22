@@ -5,7 +5,7 @@ import '../styles.css'
 
 class WelcomeModal extends Component {
   render() {
-    document.getElementById("root").className = "dialogIsOpen";
+    //document.getElementById("root").className = "dialogIsOpen";
     //document.getElementById("root").classList.remove("dialogIsOpen");
     return(
       <div className="modal-welcome center">
