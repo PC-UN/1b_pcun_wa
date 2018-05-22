@@ -37,7 +37,7 @@ class Menu extends Component {
 
   render() {
     return(
-      <div id="menu" className="col-4 parent">
+      <div id="menu" className="col-4 menu">
         <div id="accordionMS" className="w-95">
           <Filters flag={this.props.flag} user_location={this.props.user_location} handlePoints={this.props.handlePoints} />
           <Favorite id={this.props.id} center={this.props.center} handleOpenModal={this.props.handleOpenModal}/>

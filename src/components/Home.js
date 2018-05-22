@@ -238,6 +238,7 @@ class Home extends Component {
             </Modal>
           )
       default:
+        document.getElementById("root").classList.remove("dialogIsOpen");
       return(<Modal></Modal>)
     }
   }
