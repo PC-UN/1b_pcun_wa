@@ -13,6 +13,7 @@ class LoginModal extends Component {
 
           <CreateSession
             handleLogin={this.props.handleLogin}
+            handleTypeModal={this.props.handleTypeModal}
           />
 
           <button

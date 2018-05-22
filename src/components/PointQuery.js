@@ -29,10 +29,10 @@ class PointQuery extends Component {
             <div className="p-10">
               <h5>{data.pointById.name}</h5>
               <ul className="list-group list-group-flush ml-30">
-                <li><h6 className="title">Categoría: </h6>{data.pointById.category}</li>
-                <li><h6 className="title">Dirección: </h6>{data.pointById.address}</li>
-                <li><h6 className="title">Contacto: </h6>{data.pointById.contact}</li>
-                <li><h6 className="title">E-mail: </h6>{data.pointById.email}</li>
+                <li><span className="title">Categoría: </span>{data.pointById.category}</li>
+                <li><span className="title">Dirección: </span>{data.pointById.address}</li>
+                <li><span className="title">Contacto: </span>{data.pointById.contact}</li>
+                <li><span className="title">E-mail: </span>{data.pointById.email}</li>
               </ul>
             </div>
           )

@@ -52,7 +52,7 @@ class Map extends Component {
                   key={m.id}
                   lat={m.latitude}
                   lng={m.longitude}
-                  //image={"https://png.icons8.com/ultraviolet/16/000000/marker.png"}
+                  image={"https://png.icons8.com/ultraviolet/30/000000/marker.png"}
                   //image={"https://png.icons8.com/cotton/16/000000/marker.png"}
                   //image={"https://png.icons8.com/nolan/64/000000/marker.png"}
                   handleOpenModal={this.props.handleOpenModal}

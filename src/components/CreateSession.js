@@ -18,6 +18,14 @@ const CREATE_SESSION = gql`
     ){
       jwt
     }
+    auth(
+      auth: {
+        email: $email,
+        password: $password
+      }
+    ){
+      answer
+    }
   }
 `
 
@@ -65,9 +73,9 @@ class CreateSession extends Component {
               </button>
             </form>
             {loading && <p>Loading...</p>}
-            {error && <p>Contraseña o Email inválidos</p>}
+            {error && this.props.handleTypeModal(99, error)}
             {console.log("LOGIN", data)}
-            {data && this.props.handleLogin(data.createSession.jwt)}
+            {data && this.props.handleLogin(data)}
           </div>
         )}
       </Mutation>

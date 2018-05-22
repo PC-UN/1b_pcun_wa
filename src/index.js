@@ -10,7 +10,9 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import Home from './components/Home'
 import './styles.css'
 
+
 const httpLink = new HttpLink({ uri: 'http://35.229.25.3/graphiql' })
+//const httpLink = new HttpLink({ uri: 'http://35.196.104.239/graphql' })
 
 const client = new ApolloClient({
   link: httpLink,

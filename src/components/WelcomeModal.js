@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Logo from '../images/logo_2.png'
+import Logo2 from '../images/logo_2.png'
+import Logo from '../images/logo.png'
 import '../styles.css'
 
 class WelcomeModal extends Component {
@@ -9,7 +10,7 @@ class WelcomeModal extends Component {
     return(
       <div className="modal-welcome center">
         <div className="center-vertical">
-          <img src={Logo} width="100" height="100" className="m-0-10 d-inline-block align-top" alt="PC-UN logo" />
+          <img src={Logo2} width="100" height="100" className="m-0-10 d-inline-block align-top" alt="PC-UN logo" />
           <br/>
 
           <p className="title-welcome">Bienvenido</p>

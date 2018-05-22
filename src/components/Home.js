@@ -239,6 +239,7 @@ class Home extends Component {
           handleOpenModal={this.handleOpenModal}
           handleLocation={this.handleLocation}
         />
+        {this.renderModal(this.state.typeModal)}
       </div>
     )
   }

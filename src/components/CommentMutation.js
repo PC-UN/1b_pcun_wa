@@ -17,6 +17,7 @@ const MAKE_COMMENT = gql`
     }
   }
 `
+
 class CommentMutation extends Component {
   render() {
     let i_content

@@ -56,7 +56,7 @@ li, a, div, h1, h2, h3, h4, h5, h6{
   font-family: sans-serif, "Open Sans", Helvetica, Arial;
 }
 .edge{
-  border: dashed var(--main-green);
+  border: dashed var(--green-dark);
 }
 
 /* ==================================================
@@ -97,7 +97,9 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 .bg-fucsia-pc{
   background-color: var(--fucsia-pc);
 }
-
+.bg-transparent{
+  background-color: transparent;
+}
 /* ==================================================
   width & margin
   ================================================== */
@@ -155,9 +157,10 @@ hr{
 /* ==================================================
   texto & colores
   ================================================== */
-.navbar-title{
+.title-navbar{
+  margin: 0 10px;
   font-family: 'Fredericka the Great', cursive;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
 }
 .title{
@@ -317,6 +320,19 @@ hr{
   box-shadow: 2px 2px 0px var(--gray-shadow-dark);
 }
 
+.btn-invisible{
+  border: none;
+  background-color: transparent;
+}
+.btn-invisible:hover{
+  opacity: 0.6;
+}
+.btn-invisible:hover, .btn-invisible:active, .btn-invisible:focus{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .btn-accordion, .btn-accordion:link, .btn-accordion:visited, .btn-accordion:active{
   width: 100%;
   border: 0 solid transparent !important;
@@ -339,14 +355,14 @@ hr{
 
 .btn-default, .btn-default:link, .btn-default:visited, .btn-default:active{
   margin: 5px;
-  border: 1px solid var(--main-green);
+  border: 1px solid var(--green-dark);
   background-color: white;
   padding: 0 5px;
   font-weight: bold;
-  color: var(--main-green);
+  color: var(--green-dark);
 }
 .btn-default:hover{
-  background-color: var(--main-green);
+  background-color: var(--green-dark);
   color: white;
 }
 
@@ -358,17 +374,17 @@ hr{
 }
 .btn-inverse:hover{
   background: white;
-  color: var(--main-green);
+  color: var(--green-dark);
 }
 
 .btn-small, .btn-small:link, .btn-small:visited, .btn-small:active{
-  border: 1px solid var(--main-green);
+  border: 1px solid var(--green-dark);
   background-color: white;
   font-weight: bold;
-  color: var(--main-green);
+  color: var(--green-dark);
 }
 .btn-small:hover{
-  background-color: var(--main-green);
+  background-color: var(--green-dark);
   color: white;
 }
 
@@ -380,7 +396,7 @@ hr{
   margin-bottom: 1px;
   width: 100%;
   border-radius: 5px;
-  background-color: var(--main-green);
+  background-color: var(--green-dark);
   padding: 10px !important;
 }
 
@@ -476,7 +492,7 @@ hr{
   top: -25px;
   border: 2px solid white;
   border-radius: 50%;
-  background: var(--main-green);
+  background: var(--green-dark);
   color: white;
   cursor: pointer;
 }
@@ -538,4 +554,29 @@ hr{
   color: var(--black-pc);
 
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control-navbar{
+  margin: 3px;
+  width: 86%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  line-height: 1.5;
+  font-size: 17px;
+  color: var(--black-pc);
+
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* ==================================================
+  svg
+  ================================================== */
+  .svg-white, .svg-white path{
+    fill: white;
+  }
+.reflect-y{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
