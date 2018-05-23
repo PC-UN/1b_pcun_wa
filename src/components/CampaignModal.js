@@ -28,19 +28,16 @@ class CampaignModal extends Component {
           if(loading) return "Loading"
           if(error) return "Error D:"
           return(
-            <div className="Modal p-0-20 center">
+            <div className="Modal p-0-20">
               <div className="center-vertical w-100">
                 <button onClick={this.props.handleCloseModal} className="Modal-close"></button>
                 <div id="modalCard" className="card edge scroll">
-                  <h2 className="title-signin">{data.campaignById.name}</h2>
-                  {data.campaignById.city}<br/>
-                  {data.campaignById.address}<br/>
-                  {data.campaignById.ubication}<br/>
-                  {data.campaignById.created_date}<br/>
-                  {data.campaignById.start_date}<br/>
-                  {data.campaignById.end_date}<br/>
-                  {data.campaignById.status}<br/>
-                  {data.campaignById.program}<br/>
+                  <h2 className="title-signin center">{data.campaignById.name}</h2>
+                  Ciudad: {data.campaignById.city}<br/>
+                  Dirección: {data.campaignById.address}<br/>
+                  Ubicación: {data.campaignById.ubication}<br/>
+                  Estado: {data.campaignById.status}<br/>
+                  Tipo de residuo: {data.campaignById.program}<br/>
                 </div>
               </div>
             </div>

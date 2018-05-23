@@ -78,7 +78,7 @@ class Navbar extends Component {
                 onChange={e => this.handleChangeQuery(e.target.value)}
               />
               <button className="btn-invisible" onClick={e => this.handleSearchClick()}>
-                <img className="reflect-y" src="https://png.icons8.com/cotton/34/000000/detective.png"/>
+                <img className="reflect-y shake" src="https://png.icons8.com/cotton/34/000000/detective.png"/>
               </button>
             </div>
 

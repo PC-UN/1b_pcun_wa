@@ -20,8 +20,8 @@ class Campaigns extends Component {
           if(error) return "Error" + error
           return(
             <div>
-              <div id="camping" className="my-card-header">
-                <button className="btn-accordion" data-toggle="collapse"
+              <div id="camping" className="my-card-header card-header-campaign">
+                <button className="btn-accor" data-toggle="collapse"
                   data-target="#collapseTwo" aria-expanded="false"
                   aria-controls="collapseTwo">
                   Campañas
@@ -34,7 +34,7 @@ class Campaigns extends Component {
                     data.allCampaigns.map(
                       c => (
                         <div key={c._id} onClick={(e) => this.props.handleOpenModal(c._id, 2, this.props.center.lat, this.props.center.lng, e)}>
-                          <p className="bg-green-hv pointer white">{c.name}</p>
+                          <p className="bg-acc-body-hv texto-acc-body">{c.name}</p>
                           <hr/>
                         </div>
                       )

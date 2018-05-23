@@ -52,41 +52,6 @@ class CommentsQuery extends Component {
                 )
               }
               </div>
-              <Mutation mutation={MAKE_COMMENT}>
-                {
-                  createComment => (
-                    <div className="p-10">
-                      <form
-                        className="form-inline m-0-50"
-                        onSubmit={e => {
-                          e.preventDefault()
-                          createComment({
-                            variables:{
-                              point_id: this.props.id,
-                              content: i_content.value,
-                              score: 5.0
-                            }
-                          })
-                          i_content.value=""
-                        }}
-                      >
-                        <input
-                          className="form-control"
-                          ref={
-                            content => {i_content = content}
-                          }
-                        />
-                        <button
-                          className="btn btn-small"
-                          type="submit"
-                        >
-                          Comentar
-                        </button>
-                      </form>
-                    </div>
-                  )
-                }
-              </Mutation>
             </div>
           )
         }}

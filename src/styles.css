@@ -136,7 +136,7 @@ li, a, div, h1, h2, h3, h4, h5, h6{
   z-index: 1;
 }
 hr{
-  border-color: var(--green-hr);
+  border-color: var(--gray-shadow-dark);
 }
 .scroll{
   overflow-y: scroll;
@@ -183,6 +183,7 @@ hr{
   color: var(--rose-pc);
   font-family: 'Fredericka the Great', cursive;
 }
+
 
 .dark-gray{
   color: var(--green-dark);
@@ -292,7 +293,7 @@ hr{
   top: 3px;
   left: 3px;
   cursor: pointer;
-  background: var(--fucsia-pc);
+  background: var(--rose-pc);
   box-shadow: 2px 2px 0px var(--gray-shadow-dark);
 }
 
@@ -324,28 +325,11 @@ hr{
   border: none;
   background-color: transparent;
 }
-.btn-invisible:hover{
-  opacity: 0.6;
-}
+
 .btn-invisible:hover, .btn-invisible:active, .btn-invisible:focus{
   border: none;
   outline: none;
   cursor: pointer;
-}
-
-.btn-accordion, .btn-accordion:link, .btn-accordion:visited, .btn-accordion:active{
-  width: 100%;
-  border: 0 solid transparent !important;
-  outline: none !important;
-  padding: 0 !important;
-  background-color: transparent;
-  text-align: left;
-  font-size: 18px !important;
-  color: white !important;
-}
-.btn-accordion:hover{
-  cursor: pointer;
-  outline:  !important;
 }
 
 .btn{
@@ -393,13 +377,68 @@ hr{
   ================================================== */
 
 .my-card-header{
-  margin-bottom: 1px;
+  margin: 15px 0;
   width: 100%;
   border-radius: 5px;
-  background-color: var(--green-dark);
   padding: 10px !important;
+  background-color: var(--gray-shadow-dark);
+  text-align: center;
+
+  -webkit-transition: background 1s, top 0.2s; /* Safari */
+  transition: background 1s, top 0.2s;
+}
+.my-card-header:hover{
+  background-color: var(--rose-pc);
 }
 
+.btn-accor,
+.btn-accor:link,
+.btn-accor:visited,
+.btn-accor:active{
+  width: 100%;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  background-color: transparent;
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 30px !important;
+  color: white !important;
+}
+.btn-accor:hover{
+  cursor: pointer;
+  outline:  !important;
+}
+.title-acc-body{
+  font-family: 'Forum';
+  font-size: 25px;
+  color: white;
+}
+.texto-acc-body{
+  margin: 0 10px;
+  font-family: 'Forum';
+  font-size: 20px;
+  color: white;
+}
+.bg-acc-body-hv{
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: transparent;
+}
+.bg-acc-body-hv:hover{
+  background: var(--gray-shadow-dark);
+  /*background: var(--green-fluor);*/
+  cursor: pointer;
+}
+/*.my-card-favorite{
+  background-color: var(--orange-pc);
+}
+.card-header-favorite{
+  background-color: var(--fucsia-pc);
+}
+.card-header-campaign{
+  background-color: var(--green-dark);
+}*/
 /* ==================================================
   navbar
   ================================================== */
@@ -579,4 +618,30 @@ hr{
 .reflect-y{
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+/* ==================================================
+  images
+  ================================================== */
+.shake:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: scaleX(-1) translate(1px, 1px) rotate(0deg);
+       -webkit-transform: scaleX(-1);
+     }
+  10% { transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
+        -webkit-transform: scaleX(-1);
+      }
+  20% { transform: scaleX(-1) translate(-3px, 0px) rotate(1deg); }
+  30% { transform: scaleX(-1) translate(3px, 2px) rotate(0deg); }
+  40% { transform: scaleX(-1) translate(1px, -1px) rotate(1deg); }
+  50% { transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: scaleX(-1) translate(-3px, 1px) rotate(0deg); }
+  70% { transform: scaleX(-1) translate(3px, 1px) rotate(-1deg); }
+  80% { transform: scaleX(-1) translate(-1px, -1px) rotate(1deg); }
+  90% { transform: scaleX(-1) translate(1px, 2px) rotate(0deg); }
+  100% { transform: scaleX(-1) translate(1px, -2px) rotate(-1deg); }
 }
