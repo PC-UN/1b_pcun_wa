@@ -39,16 +39,18 @@ class Filters extends Component {
     console.log(this.state);
     return(
       <div>
-        <div id="points"  className="my-card-header">
-          <button className="btn-accordion" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        <div id="points"  className="my-card-header card-header-filter">
+          <button className="btn-accor collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
             Filtrar por
+            <div className="filter" style={{height:"30px", width:"30px"}}>
+            </div>
           </button>
         </div>
-        <div id="collapseFour" className="collapse" aria-labelledby="points" data-parent="#accordionMS">
+        <div id="collapseFour" className="collapse show" aria-labelledby="points" data-parent="#accordionMS">
           <div className="card-body">
             <hr/>
-            <h6 className="title">Tipo de residuo</h6>
-            <form action="" className="p-0-10">
+            <p className="title-acc-body">Tipo de residuo</p>
+            <form action="" className="p-0-10 texto-acc-body">
               <input type="radio" name="category" value="Pilas" onClick={(e) => this.handleCheck(e.target.value)}/>Pilas<br/>
               <input type="radio" name="category" value="Medicamentos" onClick={(e) => this.handleCheck(e.target.value)}/>Medicamentos<br/>
               <input type="radio" name="category" value="Llantas" onClick={(e) => this.handleCheck(e.target.value)}/>Llantas<br/>

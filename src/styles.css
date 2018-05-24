@@ -47,41 +47,17 @@
   modal
   card
   ================================================== */
-body{
-  overflow-x: auto;
-  font-family: sans-serif, "Open Sans", Helvetica, Arial;
-  min-width: 800px !important;
-}
-li, a, div, h1, h2, h3, h4, h5, h6{
-  font-family: sans-serif, "Open Sans", Helvetica, Arial;
-}
-.edge{
-  border: dashed var(--main-green);
-}
 
 /* ==================================================
-  background-colors
+  general
   ================================================== */
-.bg-red{
-  background-color: red;
-}
-.bg-yellow{
-  background-color: yellow;
-}
-.bg-green{
-  background: var(--main-green);
-  /*background: linear-gradient(to bottom right, rgb(19, 132, 68), #53ED6A);
-  background: linear-gradient(#41D681, #18af59, #53ED6A);*/
-}
-.bg-green-hv:hover{
-  background: var(--green-ligth);
-  /*background: linear-gradient(to bottom right, rgb(19, 132, 68), #53ED6A);
-  background: linear-gradient(#41D681, #18af59, #53ED6A);*/
-}
-.bg-gray{
-  background-color: var(--gray-ligth);
+body{
+  min-width: 800px !important;
 }
 
+.edge{
+  border: dashed var(--green-fluor);
+}
 
 /* ==================================================
   width & margin
@@ -95,6 +71,9 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 .w-90{
   width: 90% !important
 }
+.w-85{
+  width: 85% !important
+}
 .w-80{
   width: 80% !important
 }
@@ -104,22 +83,27 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 .w-12{
   width: 12% !important
 }
-.h-90{
-  height: 90% !important
-}
+
 .h-95{
   height: 95% !important
 }
+.h-90{
+  height: 90% !important
+}
 
 /* ==================================================
-  otros
+  varios
+    sdw
+    hr
+    scroll-y
+    my_visible
   ================================================== */
 .sdw{
   box-shadow: 0 0 10px var(--gray-shadow);
   z-index: 1;
 }
 hr{
-  border-color: var(--green-hr);
+  border-color: var(--gray-shadow-dark);
 }
 .scroll{
   overflow-y: scroll;
@@ -130,6 +114,7 @@ hr{
 .my_visible:hover{
   visibility: visible;
 }
+
 /* ==================================================
   cursores
   ================================================== */
@@ -138,34 +123,51 @@ hr{
 }
 
 /* ==================================================
-  texto & colores
+  background-colors
   ================================================== */
-.navbar-title{
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 10px;
-  color: red;
+.bg-red{
+  background-color: red;
 }
-.title{
-  color: rgb( 24, 14, 14) !important;
+.bg-yellow{
+  background-color: yellow;
 }
-.text{
-  font-size: 13px;
-  color: rgb(121, 121, 121);
-}
-.title-welcome{
-  color: white;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-}
-.title-signin{/*y login*/
-  color: var(--green-dark);
-  font-family: 'Fredericka the Great', cursive;
-}
-.title-login{
-  color: var(--rose-pc);
-  font-family: 'Fredericka the Great', cursive;
+.bg-gray{
+  background-color: var(--gray-ligth);
 }
 
+.bg-ligth{
+  background-color: var(--green-ligth);
+}
+.bg-green-fluor{
+  background-color: var(--green-fluor);
+}
+.bg-green-dark{
+  background-color: var(--green-dark);
+}
+.bg-pc{
+  background-color: var(--black-pc);
+}
+
+.bg-green-pc{
+  background-color: var(--green-pc);
+}
+.bg-orange-pc{
+  background-color: var(--orange-pc);
+}
+.bg-rose-pc{
+  background-color: var(--rose-pc);
+}
+.bg-fucsia-pc{
+  background-color: var(--fucsia-pc);
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
+/* ==================================================
+  text-colors & font-size
+  ================================================== */
 .dark-gray{
   color: var(--green-dark);
 }
@@ -192,11 +194,20 @@ hr{
 .m-0{
   margin: 0 !important;
 }
+.m-5{
+  margin: 5px !important;
+}
+.m-20{
+  margin: 20px;
+}
 .m-0-10{
   margin: 0 10px !important;
 }
 .m-0-50{
   margin: 0 50px !important;
+}
+.mt-20{
+  margin-top: 20px;
 }
 .ml-5{
   margin-left: 5px !important;
@@ -229,6 +240,9 @@ hr{
 .p-0-20{
   padding: 0 20px !important;
 }
+.pl-100{
+  padding: 100px !important;
+}
 .pl-30{
   padding-left: 30px !important;
 }
@@ -238,6 +252,9 @@ hr{
   ================================================== */
 .rigth{
   text-align: right;
+}
+.left{
+  text-align: left;
 }
 .center{
   text-align: center;
@@ -250,184 +267,24 @@ hr{
   display: inline-block;
   vertical-align: middle;
 }
+
 /* ==================================================
   buttons
   ================================================== */
-.btn-welcome {
-  margin: 5px;
-  width: 60%;
+.btn-invisible{
   border: none;
-  border-radius: 10px;
-  /*border: solid 3px var(--black-pc);*/
-  background-color: var(--green-dark);
-  padding: 5px 15px;
-  font-size: 30px;
-  font-family: 'Fredericka the Great', cursive;
-  color: white;
-  position:relative;
-  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
-
-  -webkit-transition: background 1s, top 0.2s; /* Safari */
-  transition: background 1s, top 0.2s;
-}
-.btn-welcome:hover {
-  top: 3px;
-  left: 3px;
-  cursor: pointer;
-  background: var(--fucsia-pc);
-  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
-}
-
-.btn-signin { /*y login*/
-  margin: 3px;
-  width: 40%;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--black-pc);
-  padding: 5px 15px;
-  font-size: 20px;
-  font-family: 'Fredericka the Great', cursive;
-  color: white;
-  position:relative;
-  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
-
-  -webkit-transition: background 1s, top 0.2s; /* Safari */
-  transition: background 1s, top 0.2s;
-}
-.btn-signin:hover {/*y login*/
-  top: 3px;
-  left: 3px;
-  background-color: var(--green-dark);
-  cursor: pointer;
-  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
-}
-
-.btn-accordion, .btn-accordion:link, .btn-accordion:visited, .btn-accordion:active{
-  width: 100%;
-  border: 0 solid transparent !important;
-  outline: none !important;
-  padding: 0 !important;
   background-color: transparent;
-  text-align: left;
-  font-size: 18px !important;
-  color: white !important;
 }
-.btn-accordion:hover{
+
+.btn-invisible:hover, .btn-invisible:active, .btn-invisible:focus{
+  border: none;
+  outline: none;
   cursor: pointer;
-  outline:  !important;
-}
-
-.btn{
-  margin: 0 5px;
-  border-radius: 5px;
-}
-
-.btn-default, .btn-default:link, .btn-default:visited, .btn-default:active{
-  margin: 5px;
-  border: 1px solid var(--main-green);
-  background-color: white;
-  padding: 0 5px;
-  font-weight: bold;
-  color: var(--main-green);
-}
-.btn-default:hover{
-  background-color: var(--main-green);
-  color: white;
-}
-
-.btn-inverse, .btn-inverse:link, .btn-inverse:visited, .btn-inverse:active{
-  height: 38px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-}
-.btn-inverse:hover{
-  background: white;
-  color: var(--main-green);
-}
-
-.btn-small, .btn-small:link, .btn-small:visited, .btn-small:active{
-  border: 1px solid var(--main-green);
-  background-color: white;
-  font-weight: bold;
-  color: var(--main-green);
-}
-.btn-small:hover{
-  background-color: var(--main-green);
-  color: white;
 }
 
 /* ==================================================
-  accordion
+  modals
   ================================================== */
-
-.my-card-header{
-  margin-bottom: 1px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: var(--main-green);
-  padding: 10px !important;
-}
-
-/* ==================================================
-  navbar
-  ================================================== */
-.navbar-brand {
-  font-size: 30px;
-  color: white !important;
-  font-weight: bold;
-}
-
-#profileMenu{
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 0px;
-}
-
-/* ==================================================
-  personalizado
-  ================================================== */
-#menu {
-  box-shadow: 0 0 10px var(--gray-shadow);
-  height: 85vh;
-  overflow-y: scroll;
-  padding: 10px !important;
-  padding-left: 30px !important;
-}
-
-/* ==================================================
-  modal
-  ================================================== */
-.modal-welcome{
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 100px;
-  max-width: 500px;
-  line-height: 450px;
-  height: 450px;
-  border-radius: 20px;
-  background: var(--black-pc);
-  box-shadow: 0 0 10px var(--gray-shadow);
-}
-
-.modal-signin{
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 100px;
-  max-width: 500px;
-  line-height: 450px;
-  height: 450px;
-  border-radius: 20px;
-  background: white;
-  box-shadow: 0 0 10px var(--gray-shadow);
-}
-
   .Modal {
   position: fixed;
   margin: 0 auto;
@@ -442,26 +299,23 @@ hr{
   box-shadow: 0 0 10px var(--gray-shadow);
 }
 
-.dialogIsOpen {
-  -webkit-filter: blur(5px) grayscale(50%);
-  /*-webkit-transform: scale(0.9);*/
-}
-
 .Modal-close {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   right: -25px;
   top: -25px;
-  border: 2px solid white;
+  margin: 0;
+  border: none;
   border-radius: 50%;
-  background: var(--main-green);
+  background: transparent;
   color: white;
   cursor: pointer;
+  padding: 0;
+  background-image: url("https://png.icons8.com/cotton/50/000000/delete-sign.png");
 }
 
 .Modal-close:after {
-  content: "x";
   font-weight: bold;
   font-size: 25px;
 }
@@ -494,7 +348,7 @@ hr{
 }
 
 /* ==================================================
-  card
+  flex-boxes
   ================================================== */
 .flex-box {
   display: flex;
@@ -518,3 +372,400 @@ hr{
 
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.form-control-navbar{
+  margin: 3px;
+  width: 86%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  line-height: 1.5;
+  font-size: 17px;
+  color: var(--black-pc);
+
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control-campaign{
+  margin: 3px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  line-height: 1.5;
+  font-size: 17px;
+  color: var(--black-pc);
+
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* ==================================================
+  images
+  ================================================== */
+.reflect-y{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.shake-reflect:hover {
+  animation: shake-reflect 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake-reflect {
+  0% { transform: scaleX(-1) translate(1px, 1px) rotate(0deg);}
+  10% { transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);}
+  20% { transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);}
+  30% { transform: scaleX(-1) translate(3px, 2px) rotate(0deg);}
+  40% { transform: scaleX(-1) translate(1px, -1px) rotate(1deg);}
+  50% { transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);}
+  60% { transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);}
+  70% { transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);}
+  80% { transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);}
+  90% { transform: scaleX(-1) translate(1px, 2px) rotate(0deg);}
+  100% { transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);}
+}
+
+.shake:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes shake-alarm {
+  0% { transform: rotate(-5deg); }
+  10% { transform: rotate(5deg); }
+  20% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(-10deg); }
+  80% { transform: rotate(5deg); }
+  90% { transform: rotate(-5deg); }
+  100% { transform: rotate(10deg); }
+}
+@keyframes beat {
+  0% { transform: scale(1.3);
+       -ms-transform: scale(1.3); /* IE 9 */
+       -webkit-transform: scale(1.3); /* Safari 3-8 */
+     }
+  50% { transform: scale(0.7);
+        -ms-transform: scale(0.7); /* IE 9 */
+        -webkit-transform: scale(0.7); /* Safari 3-8 */
+      }
+}
+
+
+/* ==================================================
+  modals
+  ================================================== */
+  /* ==================================================
+    modal-welcome
+    ================================================== */
+  .modal-welcome{
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    max-width: 500px;
+    line-height: 450px;
+    height: 450px;
+    border-radius: 20px;
+    background: var(--black-pc);
+    box-shadow: 0 0 10px var(--gray-shadow);
+  }
+
+  .title-welcome{
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 40px;
+  }
+
+  .btn-welcome {
+    margin: 5px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    /*border: solid 3px var(--black-pc);*/
+    background-color: var(--green-dark);
+    padding: 5px 15px;
+    font-size: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    position:relative;
+    box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+    -webkit-transition: background 1s, top 0.2s; /* Safari */
+    transition: background 1s, top 0.2s;
+  }
+  .btn-welcome:hover {
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+    background: var(--rose-pc);
+    box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+  }
+
+  .dialogIsOpen {
+    -webkit-filter: blur(5px) grayscale(50%);
+    /*-webkit-transform: scale(0.9);*/
+  }
+
+  /* ==================================================
+    modal-signin y modal-login
+    ================================================== */
+  .title-signin{/*y login*/
+    color: var(--green-dark);
+    font-family: 'Fredericka the Great', cursive;
+  }
+
+  .modal-signin{/*y login*/
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    max-width: 500px;
+    line-height: 450px;
+    height: 450px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 0 10px var(--gray-shadow);
+  }
+
+  .btn-signin { /*y login*/
+    margin: 3px;
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--black-pc);
+    padding: 5px 15px;
+    font-size: 20px;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    position:relative;
+    box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+    -webkit-transition: background 1s, top 0.2s; /* Safari */
+    transition: background 1s, top 0.2s;
+  }
+  .btn-signin:hover {/*y login*/
+    top: 3px;
+    left: 3px;
+    background-color: var(--green-dark);
+    cursor: pointer;
+    box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+  }
+  /* ==================================================
+    modal-campaign
+    ================================================== */
+  .title-campaign-modal{
+    margin-top: 20px;
+    text-align: center;
+    color: var(--green-fluor);
+    font-family: 'Fredericka the Great', cursive;
+  }
+  .texto-campaign-modal{
+    margin: 0;
+    text-align: left;
+    color: var(--black-pc);
+    font-family:'Forum';
+    font-size: 18px;
+  }
+  .favorite-div-btn{
+    width: 95%;
+    bottom: 10px;
+    text-align: right;
+  }
+  .btn-campaign-comment{
+    font-family: 'Forum' !important;
+    font-size: 20px !important;
+  }
+  /* ==================================================
+    modal-point
+    ================================================== */
+  .comments-div{
+    border: inset;
+    font-family:'Forum';
+  }
+
+/* ==================================================
+  navbar
+  ================================================== */
+.my-navbar{
+  width: 100%;
+  padding: 20px;
+  background: var(--green-fluor);
+}
+
+.svg-white, .svg-white path{
+  fill: white;
+}
+.title-navbar{
+  margin: 0 10px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+  color: white;
+}
+
+#profileImg{
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0px;
+}
+.profileMenu{
+  font-family: 'Forum';
+  font-size: 20px;
+}
+
+/* ==================================================
+  menu
+  ================================================== */
+.menu {
+  box-shadow: 0 0 10px var(--gray-shadow);
+  height: 85vh;
+  overflow-y: scroll;
+  padding-left: 30px !important;
+  background: var(--black-pc);
+}
+.near-me-div-button{
+  position: relative;
+  width: 100%;
+  bottom: 10px;
+  text-align: right;
+}
+.near-me-button{
+  position:relative;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--green-fluor);
+  padding: 5px 10px 0;
+  background-color: var(--green-fluor);
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+  -webkit-transition: background 1s, top 0.2s; /* Safari */
+  transition: background 1s, top 0.2s;
+}
+.near-me-button:hover{
+  top: 3px;
+  left: 3px;
+  cursor: pointer;
+  background: var(--rose-pc);
+  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+}
+
+  /* ==================================================
+    acordeon
+    ================================================== */
+
+  .my-card-header{
+    margin: 15px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0px !important;
+    background-color: var(--gray-shadow-dark);
+    text-align: center;
+  }
+  .my-card-header:hover .shake-alarm{
+    animation: shake-alarm 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  .my-card-header:hover .beat {
+    animation: beat 0.5s;
+    animation-iteration-count: infinite;
+  }
+  div .filter{
+    display: inline-block;
+    background: url('https://png.icons8.com/dotty/35/ffffff/filter.png');
+  }
+  .my-card-header:hover div {
+    background: red;
+    background: url('https://png.icons8.com/dotty/35/ffffff/filled-filter.png');
+  }
+  /*div {
+      background: url('http://dummyimage.com/100x100/000/fff');
+  }
+  div:hover {
+      background: url('http://dummyimage.com/100x100/eb00eb/fff');
+  }*/
+
+  .btn-accor,
+  .btn-accor:link,
+  .btn-accor:visited,
+  .btn-accor:active{
+    margin: 0px;
+    width: 100%;
+    border: none !important;
+    border-radius: 5px;
+    outline: none !important;
+    padding: 0 !important;
+    background-color: var(--rose-pc);
+    text-align: center;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 30px !important;
+    color: white !important;
+
+    -webkit-transition: background 1s, top 0.2s; /* Safari */
+    transition: background 1s, top 0.2s;
+  }
+  .collapsed{
+    background-color: transparent;
+  }
+  .btn-accor:hover{
+    cursor: pointer;
+    outline:  !important;
+    background-color: var(--rose-pc);
+  }
+  .title-acc-body{
+    font-family: 'Forum';
+    font-size: 25px;
+    color: white;
+  }
+  .texto-acc-body{
+    margin: 0 10px;
+    font-family: 'Forum';
+    font-size: 20px;
+    color: white;
+  }
+  .bg-acc-body-hv{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: transparent;
+  }
+  .bg-acc-body-hv:hover{
+    background: var(--gray-shadow-dark);
+    /*background-image: url(./images/hover_image.png);
+    background: var(--green-fluor);*/
+    cursor: pointer;
+  }
+  /*.my-card-favorite{
+    background-color: var(--orange-pc);
+  }
+  .card-header-favorite{
+    background-color: var(--fucsia-pc);
+  }
+  .card-header-campaign{
+    background-color: var(--green-dark);
+  }*/

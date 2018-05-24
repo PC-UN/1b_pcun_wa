@@ -37,18 +37,15 @@ class Menu extends Component {
 
   render() {
     return(
-      <div id="menu" className="col-4 parent">
+      <div className="col-4 menu">
         <div id="accordionMS" className="w-95">
           <Filters flag={this.props.flag} user_location={this.props.user_location} handlePoints={this.props.handlePoints} />
           <Favorite id={this.props.id} center={this.props.center} handleOpenModal={this.props.handleOpenModal}/>
           <Campaigns center={this.props.center} handleOpenModal={this.props.handleOpenModal}/>
         </div>
-        <div className="absolute w-80 center">
-          <button
-            className="btn btn-small"
-            onClick={() => this.handleCheck()}
-          >
-            Cerca a mi <i className="material-icons"> my_location</i>
+        <div className="near-me-div-button">
+          <button className="near-me-button" onClick={() => this.handleCheck()}>
+            Cerca a mi <img src="https://png.icons8.com/cotton/40/000000/route.png"/>
           </button>
         </div>
         {this.getPoints(this.state.flag)}

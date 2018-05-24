@@ -13,6 +13,7 @@ const GET_CAMPAIGNS = gql`
 
 class Campaigns extends Component {
   render() {
+
     return(
       <Query query={GET_CAMPAIGNS}>
         {({loading, error, data}) => {
@@ -20,11 +21,12 @@ class Campaigns extends Component {
           if(error) return "Error" + error
           return(
             <div>
-              <div id="camping" className="my-card-header">
-                <button className="btn-accordion" data-toggle="collapse"
+              <div id="camping" className="my-card-header card-header-campaign">
+                <button className="btn-accor collapsed" data-toggle="collapse"
                   data-target="#collapseTwo" aria-expanded="false"
                   aria-controls="collapseTwo">
                   Campañas
+                  <img className="m-0-10 shake-alarm" src="https://png.icons8.com/dotty/35/ffffff/alarm.png"/>
                 </button>
               </div>
               <div id="collapseTwo" className="collapse" aria-labelledby="camping" data-parent="#accordionMS">
@@ -34,7 +36,7 @@ class Campaigns extends Component {
                     data.allCampaigns.map(
                       c => (
                         <div key={c._id} onClick={(e) => this.props.handleOpenModal(c._id, 2, this.props.center.lat, this.props.center.lng, e)}>
-                          <p className="bg-green-hv pointer">{c.name}</p>
+                          <p className="bg-acc-body-hv texto-acc-body">{c.name}</p>
                           <hr/>
                         </div>
                       )

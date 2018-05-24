@@ -30,10 +30,11 @@ class Favorite extends Component {
           return(
             <div>
               <div id="favorites" className="my-card-header">
-                <button className="btn-accordion" data-toggle="collapse"
+                <button className="btn-accor collapsed" data-toggle="collapse"
                   data-target="#collapseOne" aria-expanded="false"
                   aria-controls="collapseOne">
                   Mis Puntos Favoritos
+                  <img className="m-0-10 beat" src="https://png.icons8.com/dotty/35/ffffff/hearts.png"/>
                 </button>
               </div>
               <div id="collapseOne" className="collapse" aria-labelledby="favorites" data-parent="#accordionMS">
@@ -42,8 +43,8 @@ class Favorite extends Component {
                   {
                     data.FavoriteById.map(
                       f => (
-                        <div className="pointer" key={f.id} onClick={(e) => this.props.handleOpenModal(f.place_id, 1, this.props.center.lat, this.props.center.lng, e)}>
-                          <p className="bg-green-hv">{f.comment}</p>
+                        <div key={f.id} onClick={(e) => this.props.handleOpenModal(f.place_id, 1, this.props.center.lat, this.props.center.lng, e)}>
+                          <p className="bg-acc-body-hv texto-acc-body">{f.comment}</p>
                           <hr/>
                         </div>
                       )
