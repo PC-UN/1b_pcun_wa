@@ -47,16 +47,79 @@
   modal
   card
   ================================================== */
+
+/* ==================================================
+  general
+  ================================================== */
 body{
-  overflow-x: auto;
-  font-family: sans-serif, "Open Sans", Helvetica, Arial;
   min-width: 800px !important;
 }
-li, a, div, h1, h2, h3, h4, h5, h6{
-  font-family: sans-serif, "Open Sans", Helvetica, Arial;
-}
+
 .edge{
   border: dashed var(--green-fluor);
+}
+
+/* ==================================================
+  width & margin
+  ================================================== */
+.w-100{
+  width: 100% !important;
+}
+.w-95{
+  width: 95% !important
+}
+.w-90{
+  width: 90% !important
+}
+.w-85{
+  width: 85% !important
+}
+.w-80{
+  width: 80% !important
+}
+.w-50{
+  width: 50% !important;
+}
+.w-12{
+  width: 12% !important
+}
+
+.h-95{
+  height: 95% !important
+}
+.h-90{
+  height: 90% !important
+}
+
+/* ==================================================
+  varios
+    sdw
+    hr
+    scroll-y
+    my_visible
+  ================================================== */
+.sdw{
+  box-shadow: 0 0 10px var(--gray-shadow);
+  z-index: 1;
+}
+hr{
+  border-color: var(--gray-shadow-dark);
+}
+.scroll{
+  overflow-y: scroll;
+}
+.my_visible{
+  visibility: hidden;
+}
+.my_visible:hover{
+  visibility: visible;
+}
+
+/* ==================================================
+  cursores
+  ================================================== */
+.pointer{
+  cursor: pointer;
 }
 
 /* ==================================================
@@ -97,94 +160,14 @@ li, a, div, h1, h2, h3, h4, h5, h6{
 .bg-fucsia-pc{
   background-color: var(--fucsia-pc);
 }
+
 .bg-transparent{
   background-color: transparent;
 }
-/* ==================================================
-  width & margin
-  ================================================== */
-.w-100{
-  width: 100% !important;
-}
-.w-95{
-  width: 95% !important
-}
-.w-90{
-  width: 90% !important
-}
-.w-85{
-  width: 85% !important
-}
-.w-80{
-  width: 80% !important
-}
-.w-50{
-  width: 50% !important;
-}
-.w-12{
-  width: 12% !important
-}
-.h-90{
-  height: 90% !important
-}
-.h-95{
-  height: 95% !important
-}
 
 /* ==================================================
-  otros
+  text-colors & font-size
   ================================================== */
-.sdw{
-  box-shadow: 0 0 10px var(--gray-shadow);
-  z-index: 1;
-}
-hr{
-  border-color: var(--gray-shadow-dark);
-}
-.scroll{
-  overflow-y: scroll;
-}
-.my_visible{
-  visibility: hidden;
-}
-.my_visible:hover{
-  visibility: visible;
-}
-/* ==================================================
-  cursores
-  ================================================== */
-.pointer{
-  cursor: pointer;
-}
-
-/* ==================================================
-  texto & colores
-  ================================================== */
-.title-navbar{
-  margin: 0 10px;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-  color: white;
-}
-.title{
-  color: rgb( 24, 14, 14) !important;
-}
-.text{
-  font-size: 13px;
-  color: rgb(121, 121, 121);
-}
-.title-welcome{
-  color: white;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 40px;
-}
-.title-signin{/*y login*/
-  color: var(--green-dark);
-  font-family: 'Fredericka the Great', cursive;
-}
-
-
-
 .dark-gray{
   color: var(--green-dark);
 }
@@ -284,58 +267,10 @@ hr{
   display: inline-block;
   vertical-align: middle;
 }
+
 /* ==================================================
   buttons
   ================================================== */
-.btn-welcome {
-  margin: 5px;
-  width: 60%;
-  border: none;
-  border-radius: 10px;
-  /*border: solid 3px var(--black-pc);*/
-  background-color: var(--green-dark);
-  padding: 5px 15px;
-  font-size: 30px;
-  font-family: 'Fredericka the Great', cursive;
-  color: white;
-  position:relative;
-  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
-
-  -webkit-transition: background 1s, top 0.2s; /* Safari */
-  transition: background 1s, top 0.2s;
-}
-.btn-welcome:hover {
-  top: 3px;
-  left: 3px;
-  cursor: pointer;
-  background: var(--rose-pc);
-  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
-}
-
-.btn-signin { /*y login*/
-  margin: 3px;
-  width: 40%;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--black-pc);
-  padding: 5px 15px;
-  font-size: 20px;
-  font-family: 'Fredericka the Great', cursive;
-  color: white;
-  position:relative;
-  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
-
-  -webkit-transition: background 1s, top 0.2s; /* Safari */
-  transition: background 1s, top 0.2s;
-}
-.btn-signin:hover {/*y login*/
-  top: 3px;
-  left: 3px;
-  background-color: var(--green-dark);
-  cursor: pointer;
-  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
-}
-
 .btn-invisible{
   border: none;
   background-color: transparent;
@@ -347,211 +282,9 @@ hr{
   cursor: pointer;
 }
 
-.btn{
-  margin: 0 5px;
-  border-radius: 5px;
-}
-
-.btn-default, .btn-default:link, .btn-default:visited, .btn-default:active{
-  margin: 5px;
-  border: 1px solid var(--green-dark);
-  background-color: white;
-  padding: 0 5px;
-  font-weight: bold;
-  color: var(--green-dark);
-}
-.btn-default:hover{
-  background-color: var(--green-dark);
-  color: white;
-}
-
-.btn-inverse, .btn-inverse:link, .btn-inverse:visited, .btn-inverse:active{
-  height: 38px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-}
-.btn-inverse:hover{
-  background: white;
-  color: var(--green-dark);
-}
-
-.btn-small, .btn-small:link, .btn-small:visited, .btn-small:active{
-  border: 1px solid var(--green-dark);
-  background-color: white;
-  font-weight: bold;
-  color: var(--green-dark);
-}
-.btn-small:hover{
-  background-color: var(--green-dark);
-  color: white;
-}
-
 /* ==================================================
-  accordion
+  modals
   ================================================== */
-
-.my-card-header{
-  margin: 15px 0;
-  width: 100%;
-  border-radius: 5px;
-  padding: 10px !important;
-  background-color: var(--gray-shadow-dark);
-  text-align: center;
-
-  -webkit-transition: background 1s, top 0.2s; /* Safari */
-  transition: background 1s, top 0.2s;
-}
-.my-card-header:hover{
-  background-color: var(--rose-pc);
-}
-
-.btn-accor,
-.btn-accor:link,
-.btn-accor:visited,
-.btn-accor:active{
-  width: 100%;
-  border: none !important;
-  outline: none !important;
-  padding: 0 !important;
-  background-color: transparent;
-  text-align: center;
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 30px !important;
-  color: white !important;
-}
-.btn-accor:hover{
-  cursor: pointer;
-  outline:  !important;
-}
-.title-acc-body{
-  font-family: 'Forum';
-  font-size: 25px;
-  color: white;
-}
-.texto-acc-body{
-  margin: 0 10px;
-  font-family: 'Forum';
-  font-size: 20px;
-  color: white;
-}
-.bg-acc-body-hv{
-  border-radius: 5px;
-  padding: 5px 10px;
-  background: transparent;
-}
-.bg-acc-body-hv:hover{
-  background: var(--gray-shadow-dark);
-  /*background: var(--green-fluor);*/
-  cursor: pointer;
-}
-/*.my-card-favorite{
-  background-color: var(--orange-pc);
-}
-.card-header-favorite{
-  background-color: var(--fucsia-pc);
-}
-.card-header-campaign{
-  background-color: var(--green-dark);
-}*/
-/* ==================================================
-  navbar
-  ================================================== */
-.my-navbar{
-  width: 100%;
-  padding: 20px;
-  background: var(--green-fluor);
-}
-.navbar-brand {
-  font-size: 30px;
-  color: white !important;
-  font-weight: bold;
-}
-
-#profileImg{
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 0px;
-}
-.profileMenu{
-  font-family: 'Forum';
-  font-size: 20px;
-}
-
-/* ==================================================
-  menu
-  ================================================== */
-.menu {
-  box-shadow: 0 0 10px var(--gray-shadow);
-  height: 85vh;
-  overflow-y: scroll;
-  padding-left: 30px !important;
-  background: var(--black-pc);
-}
-.menu-div-button{
-  position: absolute;
-  width: 90%;
-  bottom: 10px;
-  text-align: right;
-}
-.menu-button{
-  position:relative;
-  margin: 5px;
-  border-radius: 5px;
-  border: 2px solid var(--green-fluor);
-  padding: 5px 10px 0;
-  background-color: var(--green-fluor);
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 25px;
-  font-weight: bold;
-  color: white;
-  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
-
-  -webkit-transition: background 1s, top 0.2s; /* Safari */
-  transition: background 1s, top 0.2s;
-}
-.menu-button:hover{
-  top: 3px;
-  left: 3px;
-  cursor: pointer;
-  background: var(--rose-pc);
-  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
-}
-
-
-/* ==================================================
-  modal
-  ================================================== */
-.modal-welcome{
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 100px;
-  max-width: 500px;
-  line-height: 450px;
-  height: 450px;
-  border-radius: 20px;
-  background: var(--black-pc);
-  box-shadow: 0 0 10px var(--gray-shadow);
-}
-
-.modal-signin{
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 100px;
-  max-width: 500px;
-  line-height: 450px;
-  height: 450px;
-  border-radius: 20px;
-  background: white;
-  box-shadow: 0 0 10px var(--gray-shadow);
-}
-
   .Modal {
   position: fixed;
   margin: 0 auto;
@@ -564,11 +297,6 @@ hr{
   border-radius: 20px;
   background:  white;
   box-shadow: 0 0 10px var(--gray-shadow);
-}
-
-.dialogIsOpen {
-  -webkit-filter: blur(5px) grayscale(50%);
-  /*-webkit-transform: scale(0.9);*/
 }
 
 .Modal-close {
@@ -620,7 +348,7 @@ hr{
 }
 
 /* ==================================================
-  card
+  flex-boxes
   ================================================== */
 .flex-box {
   display: flex;
@@ -674,19 +402,13 @@ hr{
 }
 
 /* ==================================================
-  svg
+  images
   ================================================== */
-  .svg-white, .svg-white path{
-    fill: white;
-  }
 .reflect-y{
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
-/* ==================================================
-  images
-  ================================================== */
 .shake-reflect:hover {
   animation: shake-reflect 0.5s;
   animation-iteration-count: infinite;
@@ -699,15 +421,33 @@ hr{
   10% { transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
         -webkit-transform: scaleX(-1);
       }
-  20% { transform: scaleX(-1) translate(-3px, 0px) rotate(1deg); }
-  30% { transform: scaleX(-1) translate(3px, 2px) rotate(0deg); }
-  40% { transform: scaleX(-1) translate(1px, -1px) rotate(1deg); }
-  50% { transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: scaleX(-1) translate(-3px, 1px) rotate(0deg); }
-  70% { transform: scaleX(-1) translate(3px, 1px) rotate(-1deg); }
-  80% { transform: scaleX(-1) translate(-1px, -1px) rotate(1deg); }
-  90% { transform: scaleX(-1) translate(1px, 2px) rotate(0deg); }
-  100% { transform: scaleX(-1) translate(1px, -2px) rotate(-1deg); }
+  20% { transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);
+        -webkit-transform: scaleX(-1);
+      }
+  30% { transform: scaleX(-1) translate(3px, 2px) rotate(0deg);
+        -webkit-transform: scaleX(-1);
+      }
+  40% { transform: scaleX(-1) translate(1px, -1px) rotate(1deg);
+        -webkit-transform: scaleX(-1);
+      }
+  50% { transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);
+        -webkit-transform: scaleX(-1);
+      }
+  60% { transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);
+        -webkit-transform: scaleX(-1);
+      }
+  70% { transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);
+        -webkit-transform: scaleX(-1);
+      }
+  80% { transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);
+        -webkit-transform: scaleX(-1);
+      }
+  90% { transform: scaleX(-1) translate(1px, 2px) rotate(0deg);
+        -webkit-transform: scaleX(-1);
+      }
+  100% { transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);
+         -webkit-transform: scaleX(-1);
+       }
 }
 
 .shake:hover {
@@ -730,34 +470,273 @@ hr{
 }
 
 /* ==================================================
-  modal-campaign
+  modals
   ================================================== */
-.title-campaign-modal{
-  margin-top: 20px;
-  text-align: center;
-  color: var(--green-fluor);
+  /* ==================================================
+    modal-welcome
+    ================================================== */
+  .modal-welcome{
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    max-width: 500px;
+    line-height: 450px;
+    height: 450px;
+    border-radius: 20px;
+    background: var(--black-pc);
+    box-shadow: 0 0 10px var(--gray-shadow);
+  }
+
+  .title-welcome{
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 40px;
+  }
+
+  .btn-welcome {
+    margin: 5px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    /*border: solid 3px var(--black-pc);*/
+    background-color: var(--green-dark);
+    padding: 5px 15px;
+    font-size: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    position:relative;
+    box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+    -webkit-transition: background 1s, top 0.2s; /* Safari */
+    transition: background 1s, top 0.2s;
+  }
+  .btn-welcome:hover {
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+    background: var(--rose-pc);
+    box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+  }
+
+  .dialogIsOpen {
+    -webkit-filter: blur(5px) grayscale(50%);
+    /*-webkit-transform: scale(0.9);*/
+  }
+
+  /* ==================================================
+    modal-signin y modal-login
+    ================================================== */
+  .title-signin{/*y login*/
+    color: var(--green-dark);
+    font-family: 'Fredericka the Great', cursive;
+  }
+
+  .modal-signin{/*y login*/
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    max-width: 500px;
+    line-height: 450px;
+    height: 450px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 0 10px var(--gray-shadow);
+  }
+
+  .btn-signin { /*y login*/
+    margin: 3px;
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--black-pc);
+    padding: 5px 15px;
+    font-size: 20px;
+    font-family: 'Fredericka the Great', cursive;
+    color: white;
+    position:relative;
+    box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+    -webkit-transition: background 1s, top 0.2s; /* Safari */
+    transition: background 1s, top 0.2s;
+  }
+  .btn-signin:hover {/*y login*/
+    top: 3px;
+    left: 3px;
+    background-color: var(--green-dark);
+    cursor: pointer;
+    box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+  }
+  /* ==================================================
+    modal-campaign
+    ================================================== */
+  .title-campaign-modal{
+    margin-top: 20px;
+    text-align: center;
+    color: var(--green-fluor);
+    font-family: 'Fredericka the Great', cursive;
+  }
+  .texto-campaign-modal{
+    margin: 0;
+    text-align: left;
+    color: var(--black-pc);
+    font-family:'Forum';
+    font-size: 18px;
+  }
+  .favorite-div-btn{
+    width: 95%;
+    bottom: 10px;
+    text-align: right;
+  }
+  .btn-campaign-comment{
+    font-family: 'Forum';
+    font-size: 20px;
+  }
+  /* ==================================================
+    modal-point
+    ================================================== */
+  .comments-div{
+    border: inset;
+    font-family:'Forum';
+  }
+
+/* ==================================================
+  navbar
+  ================================================== */
+.my-navbar{
+  width: 100%;
+  padding: 20px;
+  background: var(--green-fluor);
+}
+
+.svg-white, .svg-white path{
+  fill: white;
+}
+.title-navbar{
+  margin: 0 10px;
   font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+  color: white;
 }
-.texto-campaign-modal{
-  margin: 0;
-  text-align: left;
-  color: var(--black-pc);
-  font-family:'Forum';
-  font-size: 18px;
+
+#profileImg{
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0px;
 }
-.favorite-div-btn{
-  width: 95%;
-  bottom: 10px;
-  text-align: right;
-}
-.btn-campaign-comment{
+.profileMenu{
   font-family: 'Forum';
   font-size: 20px;
 }
+
 /* ==================================================
-  modal-pont
+  menu
   ================================================== */
-.comments-div{
-  border: inset;
-  font-family:'Forum';
+.menu {
+  box-shadow: 0 0 10px var(--gray-shadow);
+  height: 85vh;
+  overflow-y: scroll;
+  padding-left: 30px !important;
+  background: var(--black-pc);
 }
+.near-me-div-button{
+  position: absolute;
+  width: 90%;
+  bottom: 10px;
+  text-align: right;
+}
+.near-me-button{
+  position:relative;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--green-fluor);
+  padding: 5px 10px 0;
+  background-color: var(--green-fluor);
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 5px 5px 0px var(--gray-shadow-dark);
+
+  -webkit-transition: background 1s, top 0.2s; /* Safari */
+  transition: background 1s, top 0.2s;
+}
+.near-me-button:hover{
+  top: 3px;
+  left: 3px;
+  cursor: pointer;
+  background: var(--rose-pc);
+  box-shadow: 2px 2px 0px var(--gray-shadow-dark);
+}
+
+  /* ==================================================
+    accordion
+    ================================================== */
+  .my-card-header{
+    margin: 15px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px !important;
+    background-color: var(--gray-shadow-dark);
+    text-align: center;
+
+    -webkit-transition: background 1s, top 0.2s; /* Safari */
+    transition: background 1s, top 0.2s;
+  }
+  .my-card-header:hover{
+    background-color: var(--rose-pc);
+  }
+
+  .btn-accor,
+  .btn-accor:link,
+  .btn-accor:visited,
+  .btn-accor:active{
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 30px !important;
+    color: white !important;
+  }
+  .btn-accor:hover{
+    cursor: pointer;
+    outline:  !important;
+  }
+  .title-acc-body{
+    font-family: 'Forum';
+    font-size: 25px;
+    color: white;
+  }
+  .texto-acc-body{
+    margin: 0 10px;
+    font-family: 'Forum';
+    font-size: 20px;
+    color: white;
+  }
+  .bg-acc-body-hv{
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: transparent;
+  }
+  .bg-acc-body-hv:hover{
+    background: var(--gray-shadow-dark);
+    /*background: var(--green-fluor);*/
+    cursor: pointer;
+  }
+  /*.my-card-favorite{
+    background-color: var(--orange-pc);
+  }
+  .card-header-favorite{
+    background-color: var(--fucsia-pc);
+  }
+  .card-header-campaign{
+    background-color: var(--green-dark);
+  }*/

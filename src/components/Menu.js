@@ -43,11 +43,8 @@ class Menu extends Component {
           <Favorite id={this.props.id} center={this.props.center} handleOpenModal={this.props.handleOpenModal}/>
           <Campaigns center={this.props.center} handleOpenModal={this.props.handleOpenModal}/>
         </div>
-        <div className="menu-div-button">
-          <button
-            className="menu-button center-vertical"
-            onClick={() => this.handleCheck()}
-          >
+        <div className="near-me-div-button">
+          <button className="near-me-button" onClick={() => this.handleCheck()}>
             Cerca a mi <img src="https://png.icons8.com/cotton/40/000000/route.png"/>
           </button>
         </div>
