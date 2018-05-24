@@ -42,6 +42,7 @@ class Filters extends Component {
         <div id="points"  className="my-card-header card-header-filter">
           <button className="btn-accor" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
             Filtrar por
+            <img className="m-0-10" src="https://png.icons8.com/dotty/35/ffffff/filter-edit.png"/>
           </button>
         </div>
         <div id="collapseFour" className="collapse" aria-labelledby="points" data-parent="#accordionMS">

@@ -10,7 +10,6 @@ class WelcomeModal extends Component {
     return(
       <div className="modal-welcome center">
         <div className="center-vertical">
-          <img src={Logo2} width="100" height="100" className="m-0-10 d-inline-block align-top" alt="PC-UN logo" />
           <br/>
 
           <p className="title-welcome">Bienvenido</p>

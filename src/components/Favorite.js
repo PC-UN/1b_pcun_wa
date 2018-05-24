@@ -34,6 +34,7 @@ class Favorite extends Component {
                   data-target="#collapseOne" aria-expanded="false"
                   aria-controls="collapseOne">
                   Mis Puntos Favoritos
+                  <img className="m-0-10" src="https://png.icons8.com/dotty/35/ffffff/hearts.png"/>  
                 </button>
               </div>
               <div id="collapseOne" className="collapse" aria-labelledby="favorites" data-parent="#accordionMS">
