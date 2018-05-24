@@ -17,11 +17,6 @@ class PointModal extends Component {
 
           <CommentsQuery id={this.props.id}/>
 
-          <div className="favorite-div-btn">
-            <button class="btn-invisible" style={{minHeight:"25px"}} type="submit">
-              <img className="shake" src="https://png.icons8.com/cotton/32/000000/like.png"/>
-            </button>
-          </div>
           <br/>
 
           <CommentMutation id={this.props.id}/>

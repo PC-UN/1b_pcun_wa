@@ -90,7 +90,7 @@ class Navbar extends Component {
               </a>
               <div className="dropdown-menu dropdown-menu-right" aria-labelledby="profileMenu">
                 <a className="dropdown-item profileMenu" href="#">Editar</a>
-                <a className="dropdown-item profileMenu" href="#">Cerrar sesión</a>
+                <a className="dropdown-item profileMenu" onClick={(e) => this.props.handleCloseSession(e)} href="#">Cerrar sesión</a>
               </div>
             </li>
           </ul>

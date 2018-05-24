@@ -38,11 +38,11 @@ class FavoriteMutation extends Component {
                 }}
               >
                 <button
-                  className="btn btn-default w-12"
+                  class="btn-invisible"
                   style={{minHeight:"25px"}}
                   type="submit"
                 >
-                  <i className="material-icons">favorite_border</i>
+                  <img className="shake" src="https://png.icons8.com/cotton/32/000000/like.png"/>
                 </button>
               </form>
             </div>
