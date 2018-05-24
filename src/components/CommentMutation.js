@@ -47,7 +47,7 @@ class CommentMutation extends Component {
                   }
                 />
                 <button
-                  className="menu-button btn-campaign-comment"
+                  className="near-me-button btn-campaign-comment"
                   type="submit"
                 >
                   Comentar

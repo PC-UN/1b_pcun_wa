@@ -413,48 +413,24 @@ hr{
   animation: shake-reflect 0.5s;
   animation-iteration-count: infinite;
 }
-
 @keyframes shake-reflect {
-  0% { transform: scaleX(-1) translate(1px, 1px) rotate(0deg);
-       -webkit-transform: scaleX(-1);
-     }
-  10% { transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
-        -webkit-transform: scaleX(-1);
-      }
-  20% { transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);
-        -webkit-transform: scaleX(-1);
-      }
-  30% { transform: scaleX(-1) translate(3px, 2px) rotate(0deg);
-        -webkit-transform: scaleX(-1);
-      }
-  40% { transform: scaleX(-1) translate(1px, -1px) rotate(1deg);
-        -webkit-transform: scaleX(-1);
-      }
-  50% { transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);
-        -webkit-transform: scaleX(-1);
-      }
-  60% { transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);
-        -webkit-transform: scaleX(-1);
-      }
-  70% { transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);
-        -webkit-transform: scaleX(-1);
-      }
-  80% { transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);
-        -webkit-transform: scaleX(-1);
-      }
-  90% { transform: scaleX(-1) translate(1px, 2px) rotate(0deg);
-        -webkit-transform: scaleX(-1);
-      }
-  100% { transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);
-         -webkit-transform: scaleX(-1);
-       }
+  0% { transform: scaleX(-1) translate(1px, 1px) rotate(0deg);}
+  10% { transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);}
+  20% { transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);}
+  30% { transform: scaleX(-1) translate(3px, 2px) rotate(0deg);}
+  40% { transform: scaleX(-1) translate(1px, -1px) rotate(1deg);}
+  50% { transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);}
+  60% { transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);}
+  70% { transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);}
+  80% { transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);}
+  90% { transform: scaleX(-1) translate(1px, 2px) rotate(0deg);}
+  100% { transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);}
 }
 
 .shake:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
-
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -468,6 +444,31 @@ hr{
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+@keyframes shake-alarm {
+  0% { transform: rotate(-5deg); }
+  10% { transform: rotate(5deg); }
+  20% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(-10deg); }
+  80% { transform: rotate(5deg); }
+  90% { transform: rotate(-5deg); }
+  100% { transform: rotate(10deg); }
+}
+@keyframes beat {
+  0% { transform: scale(1.3);
+       -ms-transform: scale(1.3); /* IE 9 */
+       -webkit-transform: scale(1.3); /* Safari 3-8 */
+     }
+  50% { transform: scale(0.7);
+        -ms-transform: scale(0.7); /* IE 9 */
+        -webkit-transform: scale(0.7); /* Safari 3-8 */
+      }
+}
+
 
 /* ==================================================
   modals
@@ -592,8 +593,8 @@ hr{
     text-align: right;
   }
   .btn-campaign-comment{
-    font-family: 'Forum';
-    font-size: 20px;
+    font-family: 'Forum' !important;
+    font-size: 20px !important;
   }
   /* ==================================================
     modal-point
@@ -675,8 +676,9 @@ hr{
 }
 
   /* ==================================================
-    accordion
+    acordeon
     ================================================== */
+
   .my-card-header{
     margin: 15px 0;
     width: 100%;
@@ -691,6 +693,29 @@ hr{
   .my-card-header:hover{
     background-color: var(--rose-pc);
   }
+  .my-card-header:hover .shake-alarm{
+    animation: shake-alarm 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  .my-card-header:hover .beat {
+    animation: beat 0.5s;
+    animation-iteration-count: infinite;
+  }
+  div .filter{
+    display: inline-block;
+    background: url('https://png.icons8.com/dotty/35/ffffff/filter.png');
+  }
+  .my-card-header:hover div {
+    background: red;
+    background: url('https://png.icons8.com/dotty/35/ffffff/filled-filter.png');
+  }
+  /*div {
+      background: url('http://dummyimage.com/100x100/000/fff');
+  }
+  div:hover {
+      background: url('http://dummyimage.com/100x100/eb00eb/fff');
+  }*/
 
   .btn-accor,
   .btn-accor:link,

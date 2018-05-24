@@ -13,6 +13,7 @@ const GET_CAMPAIGNS = gql`
 
 class Campaigns extends Component {
   render() {
+
     return(
       <Query query={GET_CAMPAIGNS}>
         {({loading, error, data}) => {
@@ -25,7 +26,7 @@ class Campaigns extends Component {
                   data-target="#collapseTwo" aria-expanded="false"
                   aria-controls="collapseTwo">
                   Campañas
-                  <img className="m-0-10 shake-reflect" src="https://png.icons8.com/dotty/35/ffffff/alarm.png"/>
+                  <img className="m-0-10 shake-alarm" src="https://png.icons8.com/dotty/35/ffffff/alarm.png"/>
                 </button>
               </div>
               <div id="collapseTwo" className="collapse" aria-labelledby="camping" data-parent="#accordionMS">
