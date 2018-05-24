@@ -646,8 +646,8 @@ hr{
   background: var(--black-pc);
 }
 .near-me-div-button{
-  position: absolute;
-  width: 90%;
+  position: relative;
+  width: 100%;
   bottom: 10px;
   text-align: right;
 }
@@ -756,7 +756,8 @@ hr{
   }
   .bg-acc-body-hv:hover{
     background: var(--gray-shadow-dark);
-    /*background: var(--green-fluor);*/
+    /*background-image: url(./images/hover_image.png);
+    background: var(--green-fluor);*/
     cursor: pointer;
   }
   /*.my-card-favorite{
