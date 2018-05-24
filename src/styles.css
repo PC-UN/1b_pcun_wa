@@ -683,15 +683,9 @@ hr{
     margin: 15px 0;
     width: 100%;
     border-radius: 5px;
-    padding: 10px !important;
+    padding: 0px !important;
     background-color: var(--gray-shadow-dark);
     text-align: center;
-
-    -webkit-transition: background 1s, top 0.2s; /* Safari */
-    transition: background 1s, top 0.2s;
-  }
-  .my-card-header:hover{
-    background-color: var(--rose-pc);
   }
   .my-card-header:hover .shake-alarm{
     animation: shake-alarm 0.5s;
@@ -721,19 +715,28 @@ hr{
   .btn-accor:link,
   .btn-accor:visited,
   .btn-accor:active{
+    margin: 0px;
     width: 100%;
     border: none !important;
+    border-radius: 5px;
     outline: none !important;
     padding: 0 !important;
-    background-color: transparent;
+    background-color: var(--rose-pc);
     text-align: center;
     font-family: 'Cabin Sketch', cursive;
     font-size: 30px !important;
     color: white !important;
+
+    -webkit-transition: background 1s, top 0.2s; /* Safari */
+    transition: background 1s, top 0.2s;
+  }
+  .collapsed{
+    background-color: transparent;
   }
   .btn-accor:hover{
     cursor: pointer;
     outline:  !important;
+    background-color: var(--rose-pc);
   }
   .title-acc-body{
     font-family: 'Forum';

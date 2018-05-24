@@ -22,7 +22,7 @@ class Campaigns extends Component {
           return(
             <div>
               <div id="camping" className="my-card-header card-header-campaign">
-                <button className="btn-accor" data-toggle="collapse"
+                <button className="btn-accor collapsed" data-toggle="collapse"
                   data-target="#collapseTwo" aria-expanded="false"
                   aria-controls="collapseTwo">
                   Campañas

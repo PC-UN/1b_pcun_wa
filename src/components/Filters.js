@@ -40,13 +40,13 @@ class Filters extends Component {
     return(
       <div>
         <div id="points"  className="my-card-header card-header-filter">
-          <button className="btn-accor" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <button className="btn-accor collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
             Filtrar por
             <div className="filter" style={{height:"30px", width:"30px"}}>
             </div>
           </button>
         </div>
-        <div id="collapseFour" className="collapse" aria-labelledby="points" data-parent="#accordionMS">
+        <div id="collapseFour" className="collapse show" aria-labelledby="points" data-parent="#accordionMS">
           <div className="card-body">
             <hr/>
             <p className="title-acc-body">Tipo de residuo</p>

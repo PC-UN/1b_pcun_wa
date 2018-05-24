@@ -30,11 +30,11 @@ class Favorite extends Component {
           return(
             <div>
               <div id="favorites" className="my-card-header">
-                <button className="btn-accor" data-toggle="collapse"
+                <button className="btn-accor collapsed" data-toggle="collapse"
                   data-target="#collapseOne" aria-expanded="false"
                   aria-controls="collapseOne">
                   Mis Puntos Favoritos
-                  <img className="m-0-10 beat" src="https://png.icons8.com/dotty/35/ffffff/hearts.png"/>  
+                  <img className="m-0-10 beat" src="https://png.icons8.com/dotty/35/ffffff/hearts.png"/>
                 </button>
               </div>
               <div id="collapseOne" className="collapse" aria-labelledby="favorites" data-parent="#accordionMS">
