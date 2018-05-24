@@ -48,8 +48,8 @@ class Navbar extends Component {
     return(
       <nav className="navbar navbar-expand navbar-light my-navbar">
         <svg className="svg-white" width="64px" height="61px" viewBox="0 0 64 61" version="1.1">
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Recycle" transform="translate(1.000000, 1.000000)" stroke="#525050" stroke-width="2">
+          <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+              <g id="Recycle" transform="translate(1.000000, 1.000000)" stroke="#525050" strokeWidth="2">
                   <path d="M11.3,41 L22.2,41 L22.2,52 L15.6,52 C12.5,51 10.6,46.7 11.4,42 L14.7,32.2" id="Shape"></path>
                   <path d="M15.7,52.7 C5.5,48.6 0.4,41 2.3,36.5 L5.7,28.5" id="Shape"></path>
                   <path d="M4.8,30.4 L0.5,28.6 C0.1,28.5 1.60427227e-14,28.1 0.1,27.7 L14.3,18.6 C14.7,18.4 15.5,18.4 15.8,18.5 L15.8,18.5 C15.8,18.5 16.8,19.2 16.9,19.6 L20.5,35.9 C20.4,36.2 20,36.4 19.6,36.2 L14.7,34" id="Shape"></path>
@@ -68,9 +68,9 @@ class Navbar extends Component {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <div class="form-inline m-0-50 w-50">
+            <div className="form-inline m-0-50 w-50">
               <input
-                class="form-control-navbar mr-sm-2"
+                className="form-control-navbar mr-sm-2"
                 type="text"
                 placeholder="Busca un punto..."
                 name="search"

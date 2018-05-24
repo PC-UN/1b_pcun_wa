@@ -13,7 +13,7 @@ class PointModal extends Component {
         <button onClick={this.props.handleCloseModal} className="Modal-close">
         </button>
         <div id="modalCard">
-          <PointQuery id={this.props.id}/>
+          <PointQuery user_id={this.props.user_id} id={this.props.id}/>
 
           <CommentsQuery id={this.props.id}/>
 

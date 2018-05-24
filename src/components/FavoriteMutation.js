@@ -20,11 +20,12 @@ const MAKE_FAVORITE = gql`
 
 class FavoriteMutation extends Component {
   render() {
+    console.log(this.props)
     return(
       <Mutation mutation={MAKE_FAVORITE}>
         {
           createFavorite => (
-            <div className>
+            <div>
               <form
                 onSubmit={ e => {
                   e.preventDefault()
@@ -38,7 +39,7 @@ class FavoriteMutation extends Component {
                 }}
               >
                 <button
-                  class="btn-invisible"
+                  className="btn btn-default w-12"
                   style={{minHeight:"25px"}}
                   type="submit"
                 >

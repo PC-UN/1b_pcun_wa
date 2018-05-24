@@ -31,7 +31,7 @@ class CommentMutation extends Component {
                 onSubmit={e => {
                   e.preventDefault()
                   createComment({
-                    variables:{
+                    variables: {
                       point_id: this.props.id,
                       content: i_content.value,
                       score: 5.0
@@ -42,6 +42,7 @@ class CommentMutation extends Component {
               >
                 <input
                   className="form-control-campaign"
+                  placeholder="Deja tu comentario..."
                   ref={
                     content => {i_content = content}
                   }

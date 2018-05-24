@@ -10,6 +10,8 @@ import LoginModal from './LoginModal'
 import SigninModal from './SigninModal'
 import ErrorModal from './ErrorModal'
 import CheckSession from './CheckSession'
+import PointCreateModal from './PointCreateModal'
+import CampaignCreateModal from './CampaignCreateModal'
 
 const stateMachine = {
   welcome: {
@@ -196,6 +198,24 @@ class Home extends Component {
             />
           </Modal>
         )
+      case 3://Point create modal
+        return(
+          <Modal>
+            <PointCreateModal
+              id={this.state.id}
+              handleCloseModal={this.handleCloseModal}
+            />
+          </Modal>
+        )
+      case 4://Campaing create modal
+        return(
+          <Modal>
+            <CampaignCreateModal
+              id={this.state.id}
+              handleCloseModal={this.handleCloseModal}
+            />
+          </Modal>
+        )
       case 10://Welcome Modal
         return(
           <Modal>
@@ -303,6 +323,7 @@ class Home extends Component {
           center={this.state.center}
           handleOpenModal={this.handleOpenModal}
           handlePoints={this.handlePoints}
+          handleTypeModal={this.handleTypeModal}
         />
         <Map
           zoom={this.state.zoom}
