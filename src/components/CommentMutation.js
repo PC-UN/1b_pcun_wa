@@ -25,7 +25,7 @@ class CommentMutation extends Component {
       <Mutation mutation={MAKE_COMMENT}>
         {
           createComment => (
-            <div className="p-10">
+            <div className="favorite-div-btn">
               <form
                 className="form-inline"
                 onSubmit={e => {
@@ -41,16 +41,17 @@ class CommentMutation extends Component {
                 }}
               >
                 <input
-                  className="form-control"
+                  className="form-control-campaign"
                   ref={
                     content => {i_content = content}
                   }
                 />
                 <button
-                  className="btn btn-small"
+                  className="menu-button btn-campaign-comment"
                   type="submit"
                 >
                   Comentar
+                  <img className="m-0-10" src="https://png.icons8.com/cotton/32/000000/speech-bubble-with-dots.png"/>
                 </button>
               </form>
             </div>

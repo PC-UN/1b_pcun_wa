@@ -78,19 +78,19 @@ class Navbar extends Component {
                 onChange={e => this.handleChangeQuery(e.target.value)}
               />
               <button className="btn-invisible" onClick={e => this.handleSearchClick()}>
-                <img className="reflect-y shake" src="https://png.icons8.com/cotton/34/000000/detective.png"/>
+                <img className="reflect-y shake-reflect" src="https://png.icons8.com/cotton/34/000000/detective.png"/>
               </button>
             </div>
 
           <ul className="navbar-nav  ml-auto">
-            <li className="white m-0-10">{this.props.username}</li>
+            <li className="white m-0-10 profileMenu">{this.props.username}</li>
             <li className="nav-item dropdown">
-              <a id="profileMenu" className="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a id="profileImg" className="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src={Image} width="40" height="40" alt="UserImg" />
               </a>
               <div className="dropdown-menu dropdown-menu-right" aria-labelledby="profileMenu">
-                <a className="dropdown-item" href="#">Editar</a>
-                <a className="dropdown-item" href="#">Cerrar sesión</a>
+                <a className="dropdown-item profileMenu" href="#">Editar</a>
+                <a className="dropdown-item profileMenu" href="#">Cerrar sesión</a>
               </div>
             </li>
           </ul>
