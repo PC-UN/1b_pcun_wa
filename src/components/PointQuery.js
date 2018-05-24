@@ -27,12 +27,12 @@ class PointQuery extends Component {
           if(error) return "Error D:"
           return(
             <div className="p-10">
-              <h5>{data.pointById.name}</h5>
+              <h3 className="title-campaign-modal">{data.pointById.name}</h3>
               <ul className="list-group list-group-flush ml-30">
-                <li><span className="title">Categoría: </span>{data.pointById.category}</li>
-                <li><span className="title">Dirección: </span>{data.pointById.address}</li>
-                <li><span className="title">Contacto: </span>{data.pointById.contact}</li>
-                <li><span className="title">E-mail: </span>{data.pointById.email}</li>
+                <li className="texto-campaign-modal"><span style={{fontWeight:"bold"}}>Categoría: </span>{data.pointById.category}</li>
+                <li className="texto-campaign-modal"><span style={{fontWeight:"bold"}}>Dirección: </span>{data.pointById.address}</li>
+                <li className="texto-campaign-modal"><span style={{fontWeight:"bold"}}>Contacto: </span>{data.pointById.contact}</li>
+                <li className="texto-campaign-modal"><span style={{fontWeight:"bold"}}>E-mail: </span>{data.pointById.email}</li>
               </ul>
             </div>
           )

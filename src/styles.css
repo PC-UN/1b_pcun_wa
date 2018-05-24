@@ -208,6 +208,12 @@ hr{
 .m-0{
   margin: 0 !important;
 }
+.m-5{
+  margin: 5px !important;
+}
+.m-20{
+  margin: 20px;
+}
 .m-0-10{
   margin: 0 10px !important;
 }
@@ -682,7 +688,7 @@ hr{
 }
 
 /* ==================================================
-  modal
+  modal-campaign
   ================================================== */
 .title-campaign-modal{
   margin-top: 20px;
@@ -696,4 +702,11 @@ hr{
   color: var(--black-pc);
   font-family:'Forum';
   font-size: 18px;
+}
+/* ==================================================
+  modal-pont
+  ================================================== */
+.comments-div{
+  border: inset;
+  font-family:'Forum';
 }
