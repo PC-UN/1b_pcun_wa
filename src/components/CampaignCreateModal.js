@@ -42,6 +42,7 @@ class CampaignCreateModal extends Component {
               <div className="center-vertical scroll">
                 <button onClick={this.props.handleCloseModal} className="Modal-close">
                 </button>
+                <h3>Crear Campaña</h3>
                 <form
                   onSubmit={ e => {
                     e.preventDefault()
@@ -50,7 +51,7 @@ class CampaignCreateModal extends Component {
                         name: i_name.value,
                         city: i_city.value,
                         address: i_address.value,
-                        ubication: i_ubication.value,
+                        ubication: i_ubication,
                         created_date: i_create_date.value,
                         start_date: i_start_date.value,
                         end_date: i_end_date.value,
@@ -66,7 +67,7 @@ class CampaignCreateModal extends Component {
                     i_start_date.value=""
                     i_end_date.value=""
                     i_status.value=""
-                    i_program.valu=""
+                    i_program.value=""
                   }}
                 >
                   <input
@@ -91,11 +92,11 @@ class CampaignCreateModal extends Component {
                     }
                   />
                   <input
-                  	type="hidden"
-                  	value="[10,10]"
-                  	ref={
-                  		ubication => {i_ubication = ubication}
-                  	}
+                    type="hidden"
+                    value={[10, 10]}
+                    ref={
+                      ubication => {i_ubication = ubication}
+                    }
                   />
                   <h5>Fecha de creación</h5>
                   <input
@@ -126,7 +127,7 @@ class CampaignCreateModal extends Component {
                       status => {i_status = status}
                     }
                   />
-                  <intput
+                  <input
                     type="text"
                     placeholder="Programa"
                     ref={

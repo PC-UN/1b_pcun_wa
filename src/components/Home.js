@@ -203,6 +203,7 @@ class Home extends Component {
           <Modal>
             <PointCreateModal
               id={this.state.id}
+              center={this.state.center}
               handleCloseModal={this.handleCloseModal}
             />
           </Modal>
