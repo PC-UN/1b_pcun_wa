@@ -42,7 +42,7 @@ class CampaignCreateModal extends Component {
               <div className="center-vertical scroll">
                 <button onClick={this.props.handleCloseModal} className="Modal-close">
                 </button>
-                <h3>Crear Campaña</h3>
+                <h3  className="title-campaign-modal">Crear Campaña</h3><br/>
                 <form
                   onSubmit={ e => {
                     e.preventDefault()
@@ -69,72 +69,75 @@ class CampaignCreateModal extends Component {
                     i_status.value=""
                     i_program.value=""
                   }}
+                  className="center"
                 >
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Nombre"
                     ref={
                       name => {i_name = name}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Ciudad"
                     ref={
                       city => {i_city = city}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Dirección"
                     ref={
                       address => {i_address = address}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="hidden"
                     value={[10, 10]}
                     ref={
                       ubication => {i_ubication = ubication}
                     }
-                  />
-                  <h5>Fecha de creación</h5>
-                  <input
+                  /><br/>
+                  <label class="">Fecha de creación: </label>
+                  <input className="form-control-create"
                     type="date"
                     ref={
                       created_date => {i_create_date = created_date}
                     }
                   />
-                  <h5>Fecha de inicio</h5>
-                  <input
+
+                  <label class="">Fecha de inicio: </label>
+                  <input  className="form-control-create"
                     type="date"
                     placeholder="Fecha de inicio"
                     ref={
                       start_date => {i_start_date = start_date}
                     }
                   />
-                  <h5>Fecha de finalización</h5>
-                  <input
+                  <label class="">Fecha de finalización</label>
+                  <input  className="form-control-create"
                     type="date"
                     ref={
                       end_date => {i_end_date = end_date}
                     }
                   />
-                  <input
+                  <input  className="form-control-create"
                     type="hidden"
                     value="Activo"
                     ref={
                       status => {i_status = status}
                     }
                   />
-                  <input
+                  <input  className="form-control-create"
                     type="text"
                     placeholder="Programa"
                     ref={
                       program => {i_program = program}
                     }
                   />
-                  <button
+                  <br/>
+                  <button className="near-me-button"
                     type="submit"
                   >Crear
                   </button>

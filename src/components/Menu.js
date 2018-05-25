@@ -43,13 +43,23 @@ class Menu extends Component {
           <Favorite id={this.props.id} center={this.props.center} handleOpenModal={this.props.handleOpenModal}/>
           <Campaigns center={this.props.center} handleOpenModal={this.props.handleOpenModal}/>
         </div>
-
-        <button onClick={() => this.props.handleTypeModal(3)}>Crear Nuevo Punto</button>
-        <button onClick={() => this.props.handleTypeModal(4)}>Crear Nueva Campaña</button>
+        <br/>
 
         <div className="near-me-div-button">
           <button className="near-me-button" onClick={() => this.handleCheck()}>
             Cerca a mi <img src="https://png.icons8.com/cotton/40/000000/route.png"/>
+          </button>
+        </div>
+
+        <div className="near-me-div-button">
+          <button className="near-me-button" onClick={() => this.props.handleTypeModal(3)}>
+            Crear Nuevo Punto <img src="https://png.icons8.com/cotton/40/000000/plus.png"/>
+          </button>
+        </div>
+
+        <div className="near-me-div-button">
+          <button className="near-me-button" onClick={() => this.props.handleTypeModal(4)}>
+            Crear Nueva Campaña <img src="https://png.icons8.com/cotton/40/000000/plus.png"/>
           </button>
         </div>
         {this.getPoints(this.state.flag)}

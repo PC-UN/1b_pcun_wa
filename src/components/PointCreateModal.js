@@ -42,10 +42,11 @@ class PointCreateModal extends Component {
         {
           createPoint => (
             <div className="Modal p-0-20">
-              <div className="center-vertical scroll">
+              <div className="center-vertical w-100 scroll">
                 <button onClick={this.props.handleCloseModal} className="Modal-close">
                 </button>
-                <h3>Crear Punto</h3>
+                <h3 className="title-campaign-modal">Crear Punto</h3>
+                <br/>
                 <form
                   onSubmit={ e => {
                     e.preventDefault()
@@ -74,22 +75,23 @@ class PointCreateModal extends Component {
                     i_city.value=""
                     i_departament.value=""
                   }}
+                  className="center"
                 >
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Nombre"
                     ref={
                       name => {i_name = name}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Dirección"
                     ref={
                       address => {i_address = address}
                     }
                   />
-                  <select
+                  <select className="form-control-create"
                     ref={
                       category => {i_category = category}
                     }
@@ -102,56 +104,56 @@ class PointCreateModal extends Component {
                     <option value="Bombillas">Bombillas</option>
                     <option value="Baterías de Plomo">Baterías de Plomo</option>
                   </select>
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="E-mail"
                     ref={
                       email => {i_email = email}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="hidden"
                     value={this.props.center.lat}
                     ref={
                       latitude => {i_latitude = latitude}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="hidden"
                     value={this.props.center.lng}
                     ref={
                       longitude => {i_longitude = longitude}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Contacto"
                     ref={
                       contact => {i_contact = contact}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Horas de negocio"
                     ref={
                       business_hours => {i_business_hours = business_hours}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Departamento"
                     ref={
                       departament => {i_departament = departament}
                     }
                   />
-                  <input
+                  <input className="form-control-create"
                     type="text"
                     placeholder="Ciudad"
                     ref={
                       city => {i_city = city}
                     }
-                  />
-                  <button
+                  /><br/><br/>
+                  <button className="near-me-button"
                     type="submit"
                   >Crear
                   </button>

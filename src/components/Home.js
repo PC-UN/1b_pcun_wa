@@ -78,6 +78,8 @@ class Home extends Component {
         })
         break;
       default:
+      document.getElementById("root").classList.remove("dialogIsOpen");
+      
         break;
     }
   }
