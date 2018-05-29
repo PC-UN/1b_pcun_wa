@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Logo2 from '../images/logo_2.png'
 import Logo from '../images/logo.png'
 import '../styles.css'
+import validator from 'validator'
 
 class WelcomeModal extends Component {
   render() {
